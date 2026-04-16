@@ -309,7 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kirby: {fileID: 1789782922}
   NextDoor: {fileID: 145292959}
-  camKirby: {fileID: 0}
+  camKirby: {fileID: 6268603098912025881}
   newMinX: -10.44
   newMaxX: -2
   newMinY: -2
@@ -440,6 +440,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2282163087746752996, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2549623260880706216, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
       propertyPath: m_Name
       value: NES - Kirby's Adventure - Stages - Orange Ocean 2
@@ -451,6 +455,14 @@ PrefabInstance:
     - target: {fileID: 3629441477530153156, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889824067811148860, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181350708849343369, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5579508531046479143, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,6 +508,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 7087216967571432997, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7255100605934565904, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -507,6 +523,10 @@ PrefabInstance:
     - target: {fileID: 8755941805551547746, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024556170917487563, guid: 4689467161005d1478bf5b0f6f21f507, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
