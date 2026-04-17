@@ -48,6 +48,9 @@ public class PuertaKirby : MonoBehaviour
     {
         CameraTargetFollow cam = kirbyObj.GetComponentInChildren<CameraTargetFollow>();
         cam.maxX = newMaxX;
+        cam.maxY = newMaxY;
+        cam.minX = newMinX;
+        cam.minY = newMinY;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
