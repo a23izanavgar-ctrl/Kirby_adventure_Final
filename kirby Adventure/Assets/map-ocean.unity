@@ -199,7 +199,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22376966, y: 2.996452}
   m_EdgeRadius: 0
---- !u!1001 &255960174
+--- !u!1001 &242560486
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -209,11 +209,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.97
+      value: 2.79
       objectReference: {fileID: 0}
     - target: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.09
+      value: 3.556
       objectReference: {fileID: 0}
     - target: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.z
@@ -247,45 +247,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3381415597863121076, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: c4a742d8c40eded49911091c6a3ceff3, type: 2}
     - target: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_Name
       value: kirby
-      objectReference: {fileID: 0}
-    - target: {fileID: 6188436600415453610, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-      propertyPath: jumpImpulse
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6188436600415453610, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-      propertyPath: default_gravity
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6188436600415453610, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-      propertyPath: floatingImpulse
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6188436600415453610, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-      propertyPath: floating_gravity
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
---- !u!4 &255960175 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-  m_PrefabInstance: {fileID: 255960174}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &255960176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5948423144891703513, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-  m_PrefabInstance: {fileID: 255960174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &408302069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,11 +276,6 @@ MonoBehaviour:
   newMinY: 0
   newMaxY: 0
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
---- !u!1 &446343695 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-  m_PrefabInstance: {fileID: 255960174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &644884216
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +353,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22376966, y: 2.996452}
   m_EdgeRadius: 0
+--- !u!1 &896110411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896110412}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &896110412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896110411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.67, y: -3.65, z: 0.04074243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954499498
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954499499}
   - component: {fileID: 954499501}
-  - component: {fileID: 954499500}
+  - component: {fileID: 954499502}
   m_Layer: 0
   m_Name: GameObject-door-2.2
   m_TagString: Untagged
@@ -421,26 +417,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4674709697822918806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &954499500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954499498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca0bd08351e5d4429adcd2c52badcfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kirby: {fileID: 446343695}
-  NextDoor: {fileID: 5268051149883254293}
-  camKirby: {fileID: 6268603098912025881}
-  newMinX: 0
-  newMaxX: 0
-  newMinY: 0
-  newMaxY: 0
-  actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!61 &954499501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -486,6 +462,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &954499502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954499498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca0bd08351e5d4429adcd2c52badcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kirby: {fileID: 1235407401}
+  NextDoor: {fileID: 1343383908}
+  camKirby: {fileID: 6268603098912025881}
+  newMinX: 9.6
+  newMaxX: 7.4
+  newMinY: -3.65
+  newMaxY: 1.69
+  actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!1 &1228613265
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +559,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22376966, y: 2.996452}
   m_EdgeRadius: 0
+--- !u!1 &1235407401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+  m_PrefabInstance: {fileID: 242560486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1235407407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+  m_PrefabInstance: {fileID: 242560486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1339240259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5948423144891703513, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+  m_PrefabInstance: {fileID: 242560486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1343383908
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca0bd08351e5d4429adcd2c52badcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kirby: {fileID: 446343695}
+  kirby: {fileID: 1235407401}
   NextDoor: {fileID: 3587879373402022480}
   camKirby: {fileID: 6268603098912025881}
   newMinX: -8.7
@@ -1200,7 +1211,7 @@ Transform:
   m_GameObject: {fileID: 6268603098912025881}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6000001, y: 3.37, z: -3.4392219}
+  m_LocalPosition: {x: 3.42, y: 3.836, z: -3.4392219}
   m_LocalScale: {x: 1.175, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1310,7 +1321,7 @@ Transform:
   m_GameObject: {fileID: 8110466548770287027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6000001, y: 3.37, z: -3.4392219}
+  m_LocalPosition: {x: 3.42, y: 3.836, z: -3.4392219}
   m_LocalScale: {x: 0.066668, y: 0.066667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3981,8 +3992,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 70
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 255960175}
-  m_Follow: {fileID: 255960176}
+  m_LookAt: {fileID: 1235407407}
+  m_Follow: {fileID: 1339240259}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 0.86
@@ -8125,4 +8136,5 @@ SceneRoots:
   - {fileID: 5060459018850513074}
   - {fileID: 620203770653397858}
   - {fileID: 520650952193266699}
-  - {fileID: 255960174}
+  - {fileID: 242560486}
+  - {fileID: 896110412}
