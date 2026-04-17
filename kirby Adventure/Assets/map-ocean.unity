@@ -396,6 +396,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: kirby
       objectReference: {fileID: 0}
+    - target: {fileID: 9179123579189227652, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179123579189227652, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179123579189227652, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -258601031, guid: 39ebcc82ca3e26c4b90f082f7df1df90, type: 3}
+    - target: {fileID: 9179123579189227652, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
