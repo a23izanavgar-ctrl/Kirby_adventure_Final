@@ -78,8 +78,8 @@ MonoBehaviour:
   player: {fileID: 8549552240444366178}
   minX: -8.7
   maxX: 2.8
-  minY: 3.1
-  maxY: 3.3
+  minY: 3.45
+  maxY: 3.7
 --- !u!1 &5900995953851655415
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 5900995953851655415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.380064, y: -2.9883404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -185,9 +185,6 @@ MonoBehaviour:
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   speed: 1
   jumpImpulse: 3
-  floatingImpulse: 0.5
-  default_gravity: 0.5
-  floating_gravity: 0.1
 --- !u!50 &802706594074124500
 Rigidbody2D:
   serializedVersion: 4

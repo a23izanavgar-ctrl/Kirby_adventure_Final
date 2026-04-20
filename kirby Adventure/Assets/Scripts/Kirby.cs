@@ -21,6 +21,18 @@ public class Kirby : MonoBehaviour
         return kirby;
     }
 
+    void Awake()
+    {
+        if (kirby != null && kirby != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        kirby = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     /** INPUT **/
     [SerializeField] InputActionAsset actions;
 
