@@ -2026,6 +2026,7 @@ MonoBehaviour:
   newMinY: 3.45
   newMaxY: 3.7
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
+  fade: {fileID: 0}
 --- !u!1 &1710092983
 GameObject:
   m_ObjectHideFlags: 0
