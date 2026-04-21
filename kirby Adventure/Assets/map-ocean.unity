@@ -288,10 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca0bd08351e5d4429adcd2c52badcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kirby: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
   NextDoor: {fileID: 7367246195748779437}
-  camKirby: {fileID: 7244523621255075799, guid: 988597ab9de81294ea6d4ef71de7f780, type: 3}
-  newMinX: -8.85
+  newMinX: -8.35
   newMaxX: 2.8
   newMinY: -3.7
   newMaxY: -3.4
@@ -321,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 509916708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.56, y: -7.1, z: 0.06288136}
+  m_LocalPosition: {x: -10.28, y: 3, z: 0.06288136}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -494,12 +492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca0bd08351e5d4429adcd2c52badcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kirby: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
   NextDoor: {fileID: 1343383908}
-  camKirby: {fileID: 7244523621255075799, guid: 988597ab9de81294ea6d4ef71de7f780, type: 3}
-  newMinX: 8.4
-  newMaxX: 8.8
-  newMinY: -3.4
+  newMinX: 8.85
+  newMaxX: 8.85
+  newMinY: -3.3
   newMaxY: 1.2
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!1 &1228613265
@@ -699,10 +695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca0bd08351e5d4429adcd2c52badcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kirby: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
   NextDoor: {fileID: 3587879373402022480}
-  camKirby: {fileID: 7244523621255075799, guid: 988597ab9de81294ea6d4ef71de7f780, type: 3}
-  newMinX: -8.7
+  newMinX: -8.38
   newMaxX: -4.65
   newMinY: -0.89
   newMaxY: 1
@@ -1059,13 +1053,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81a1b2161e8058419e0f9c384cda8a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kirby: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-  camKirby: {fileID: 7244523621255075799, guid: 988597ab9de81294ea6d4ef71de7f780, type: 3}
+  debug: nivel completado! --> volver a niveles
   mapa: mapa-niveles
-  NextPosition: {x: -0.553, y: -0.212}
-  newMinX: -1.36
-  newMaxX: 1.36
-  newMinY: -0.9
+  NextPosition: {x: -1.85, y: -1}
+  newMinX: -1.02
+  newMaxX: 1.02
+  newMinY: -0.6
   newMaxY: 1.3
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!4 &64361893920759072
@@ -4807,7 +4800,7 @@ Transform:
   m_GameObject: {fileID: 2897552892084281149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.01, y: -3.698, z: 0}
+  m_LocalPosition: {x: 0.24, y: 0.15, z: 0}
   m_LocalScale: {x: 1.4537542, y: 1.1017572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
