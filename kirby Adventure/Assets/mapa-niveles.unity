@@ -1788,11 +1788,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624260068369537817, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.9983525
       objectReference: {fileID: 0}
     - target: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_Name
       value: kirby
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188436600415453610, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7862068145903522469, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: maxX
