@@ -11,7 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/mapa-niveles.unity
     guid: 88a483f977f1c8a478a6b16afcdbc3db
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/map-pirata.unity
     guid: 9b25b6c7dcbbeea4eb108f69c70e9cac
   m_configObjects: {}
+=======
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: dd2c8de080e99334184a89d4489abaab, type: 2}
+>>>>>>> 8bb7c9b3e152286840a97d6e1a05561c0b5df7a4
