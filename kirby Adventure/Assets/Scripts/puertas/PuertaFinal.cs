@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PuertaFinal : MonoBehaviour
 {
-    [SerializeField] GameObject kirby;
-    [SerializeField] GameObject camKirby; /** --> la virtual camera */
-    [SerializeField] string mapa; /** --> mapa-niveles*/
+    [SerializeField] string debug;
+    [SerializeField] string mapa; /** --> nombre del mapa*/
     [SerializeField] Vector2 NextPosition;
 
     [SerializeField] float newMinX;
@@ -32,10 +31,14 @@ public class PuertaFinal : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (NextPosition != null)
-            Kirby.instance.transform.position = NextPosition;
-            camKirby.transform.position = NextPosition;
+        Kirby.instance.transform.position = NextPosition;
 
+        /** ajustar limites camara despues de cargar la escena */
+        CameraTargetFollow cam = Kirby.instance.GetComponentInChildren<CameraTargetFollow>();
+        cam.maxX = newMaxX;
+        cam.maxY = newMaxY;
+        cam.minX = newMinX;
+        cam.minY = newMinY;
     }
 
 
@@ -44,21 +47,11 @@ public class PuertaFinal : MonoBehaviour
     {
         if (use_action.WasPressedThisFrame() && KirbyTrigger)
         {
-            Debug.Log("Nivel cambiado");
+            Debug.Log(debug);
 
             SceneManager.LoadScene(mapa); /** cambiar a la escena de niveles*/
 
-            EntraKirbyPorLaPuerta(kirby); /** ajustar limites camara */
         }
-    }
-
-    public void EntraKirbyPorLaPuerta(GameObject kirbyObj)
-    {
-        CameraTargetFollow cam = kirbyObj.GetComponentInChildren<CameraTargetFollow>();
-        cam.maxX = newMaxX;
-        cam.maxY = newMaxY;
-        cam.minX = newMinX;
-        cam.minY = newMinY;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

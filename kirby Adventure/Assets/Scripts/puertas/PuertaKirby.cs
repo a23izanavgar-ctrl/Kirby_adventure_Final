@@ -6,10 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PuertaKirby : MonoBehaviour
 {
-
-    [SerializeField] GameObject kirby;
     [SerializeField] GameObject NextDoor; /** referencia al objeto (proxima puerta) */
-    [SerializeField] GameObject camKirby; /** --> la virtual camera */
 
     [SerializeField] float newMinX;
     [SerializeField] float newMaxX;
@@ -34,11 +31,14 @@ public class PuertaKirby : MonoBehaviour
         if (use_action.WasPressedThisFrame() && KirbyTrigger)
         {
             Debug.Log("Entrando...");
+            GameObject kirbyObj = Kirby.instance.gameObject; /** gracias al singleton de kirby*/
 
-            kirby.transform.position = NextDoor.transform.position; /** pasar posicion de la siguiente puerta a Kirby */
-            camKirby.transform.position = NextDoor.transform.position;
+            /** teletransportar al kirby (el singleton) */
+            Rigidbody2D rb = kirbyObj.GetComponent<Rigidbody2D>();
+            rb.position = NextDoor.transform.position;
 
-            EntraKirbyPorLaPuerta(kirby); /** ajustar limites camara */
+
+            EntraKirbyPorLaPuerta(kirbyObj); /** ajustar camara */
 
 
         }
