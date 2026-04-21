@@ -39,6 +39,8 @@ public class Kirby : MonoBehaviour
     InputAction move_action;
     InputAction jump_action;
 
+    float timeFalling = 0;
+
     /** MOVIMIENTO **/
     [SerializeField] float speed;
     [SerializeField] float jumpImpulse;
@@ -49,7 +51,8 @@ public class Kirby : MonoBehaviour
     enum KIRBY_STATES
     {
         WALKING,
-        JUMPING
+        JUMPING,
+        FALLING
     };
 
     KIRBY_STATES currentState;
@@ -78,7 +81,13 @@ public class Kirby : MonoBehaviour
             case KIRBY_STATES.JUMPING:
                 UpdateJumping_state();
                 break;
+            case KIRBY_STATES.FALLING:
+                Update_Falling_State();
+                break;
+                
         }
+
+        Debug.Log(rgb.velocity.y);
     }
 
     void UpdateWalking_state()
@@ -87,22 +96,31 @@ public class Kirby : MonoBehaviour
         {
             currentState = KIRBY_STATES.JUMPING;
             rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
-            ator.SetBool("IsGrounded", true);
             ator.SetTrigger("HasJumped");
+           
 
         }
     }
 
     void UpdateJumping_state()
     {
+        if (rgb.velocity.y < 0)
+        {
+            ator.SetTrigger("Voltereta");
+            currentState = KIRBY_STATES.FALLING; 
+        }
+        
+
         //Mirar cuando la velocidad en Y empieze a ser negativa para dar la voltereta.
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         currentState = KIRBY_STATES.WALKING;
-        ator.SetBool("IsGrounded", false);
-
+        ator.SetBool("IsGrounded", true);
+        timeFalling = 0;
+        
     }
 
     void FixedUpdate()
@@ -118,7 +136,7 @@ public class Kirby : MonoBehaviour
         rgb.velocity = new Vector2(sign * speed, rgb.velocity.y);
 
         // Animación (CLAVE)
-        ator.SetFloat("Speed", Mathf.Abs(sign));
+        ator.SetFloat("SpeedX", Mathf.Abs(sign));
         if (sign > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
@@ -127,5 +145,19 @@ public class Kirby : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+    }
+
+     void Update_Falling_State()
+    {
+        if(rgb.velocity.y < 0)
+        {
+            ator.SetFloat("SpeedY", -1);
+        }
+
+        
+
+        timeFalling += Time.deltaTime;
+            ator.SetFloat("TimeFalling", timeFalling);       
+
     }
 }
