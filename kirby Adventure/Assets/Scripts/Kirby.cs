@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class Kirby : MonoBehaviour
 {
@@ -88,7 +87,7 @@ public class Kirby : MonoBehaviour
                 
         }
 
-        /*Debug.Log(rgb.velocity.y);*/
+        Debug.Log(rgb.velocity.y);
     }
 
     void UpdateWalking_state()

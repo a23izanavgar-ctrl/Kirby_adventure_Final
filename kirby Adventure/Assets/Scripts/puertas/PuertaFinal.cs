@@ -19,7 +19,6 @@ public class PuertaFinal : MonoBehaviour
     InputAction use_action;
 
     bool KirbyTrigger = false;
-    public static PuertaFinal lastUsedDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +31,6 @@ public class PuertaFinal : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (lastUsedDoor != this) return;
-
         Kirby.instance.transform.position = NextPosition;
 
         /** ajustar limites camara despues de cargar la escena */
@@ -52,7 +49,6 @@ public class PuertaFinal : MonoBehaviour
         {
             Debug.Log(debug);
 
-            lastUsedDoor = this;
             SceneManager.LoadScene(mapa); /** cambiar a la escena de niveles*/
 
         }
