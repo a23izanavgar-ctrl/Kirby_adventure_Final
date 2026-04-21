@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/mapa-niveles.unity
     guid: 88a483f977f1c8a478a6b16afcdbc3db
+  - enabled: 1
+    path: Assets/map-pirata.unity
+    guid: 9b25b6c7dcbbeea4eb108f69c70e9cac
   m_configObjects: {}

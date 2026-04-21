@@ -1165,6 +1165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201006555}
   - component: {fileID: 1201006556}
+  - component: {fileID: 1201006557}
   m_Layer: 0
   m_Name: GameObject-puerta-2
   m_TagString: Untagged
@@ -1232,6 +1233,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1201006557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201006554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81a1b2161e8058419e0f9c384cda8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: nivel cambiado --> grape garden
+  mapa: map-pirata
+  NextPosition: {x: -10, y: 4}
+  newMinX: -5
+  newMaxX: -5.537
+  newMinY: 4
+  newMaxY: 2
+  actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!1 &1201157075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,11 +1749,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 6afe31cc6801a9d4f8facdc4986a8436, type: 2}
     - target: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1859999
+      value: -0.162
       objectReference: {fileID: 0}
     - target: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.70400006
+      value: -1.195
       objectReference: {fileID: 0}
     - target: {fileID: 2056732758731370867, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1831,74 +1852,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1617859508}
   m_SourcePrefab: {fileID: 100100000, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
---- !u!1 &1497392795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1497392796}
-  - component: {fileID: 1497392798}
-  - component: {fileID: 1497392797}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1497392796
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497392795}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1497392797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497392795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1497392798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497392795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1 &1617859502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5449053610409494949, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
@@ -2026,7 +1979,6 @@ MonoBehaviour:
   newMinY: 3.45
   newMaxY: 3.7
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
-  fade: {fileID: 0}
 --- !u!1 &1710092983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +2398,7 @@ Transform:
   m_GameObject: {fileID: 1881914408}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.198, y: 2.827, z: 0.06288136}
+  m_LocalPosition: {x: -2.186, y: -0.7040001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2672,4 +2624,3 @@ SceneRoots:
   - {fileID: 1794523744}
   - {fileID: 1451733932}
   - {fileID: 1881914409}
-  - {fileID: 1497392796}
