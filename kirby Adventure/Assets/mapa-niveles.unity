@@ -1165,6 +1165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201006555}
   - component: {fileID: 1201006556}
+  - component: {fileID: 1201006557}
   m_Layer: 0
   m_Name: GameObject-puerta-2
   m_TagString: Untagged
@@ -1232,6 +1233,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1201006557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201006554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81a1b2161e8058419e0f9c384cda8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 
+  mapa: 
+  NextPosition: {x: 0, y: 0}
+  newMinX: 0
+  newMaxX: 0
+  newMinY: 0
+  newMaxY: 0
+  actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!1 &1201157075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,27 +1793,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624260068369537817, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: orthographic size
-      value: 0.81
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 3624260068369537817, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.001814882
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3624260068369537817, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0020491802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3624260068369537817, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.99637026
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3624260068369537817, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9959016
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5900995953851655415, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_Name
       value: kirby
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188436600415453610, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: flotarImpulse
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7862068145903522469, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: maxX
@@ -2026,7 +2051,6 @@ MonoBehaviour:
   newMinY: 3.45
   newMaxY: 3.7
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
-  fade: {fileID: 0}
 --- !u!1 &1710092983
 GameObject:
   m_ObjectHideFlags: 0
