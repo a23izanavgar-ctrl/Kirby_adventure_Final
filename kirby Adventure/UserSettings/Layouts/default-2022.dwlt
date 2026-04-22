@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 30593
+  controlID: 36
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 456
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -178,7 +178,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 30594
+  controlID: 37
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 30563
+  controlID: 38
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -432,14 +432,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\DUnity\GitHubKirby\kirby Adventure
+  m_LastProjectPath: E:\Kirby Adventure\kirby Adventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e6770000
-    m_LastClickedID: 30694
-    m_ExpandedIDs: 00000000e6770000b479000000ca9a3bffffff7f
+    m_SelectedIDs: fa790000
+    m_LastClickedID: 31226
+    m_ExpandedIDs: 00000000fa790000fc790000fe790000007a0000027a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -467,7 +467,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e677000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000fa790000fc790000fe790000007a0000027a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ceccfdffa2cdfdffccd1fdff64d2fdff02d3fdffccd3fdff6ad4fdffacd5fdffd2d6fdffc4f9fdffc6f9fdff5cfafdfffafafdffc4fbfdff0cfdfdff0efefdfffefefdffcefffdff220ffeff240ffeffee0ffeffb013feff4614feffae15feff5e16feff1c3bfeff143cfeff8e3dfeffc442feffac43feff42fbfffff4ffffff48290100522901000c2d0100e42d01003c350100623501005836010062360100d6390100fc390100bc5701005c5a0100305b0100565b01000a670100146701008c6a0100b26a010014790100ec790100707b01008e7b010086880100a4880100a8a60100c6a60100a4aa0100aeaa010038ae0100
+      m_ExpandedIDs: 6cf8ffff70faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1008,16 +1008,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.18593158, y: -0.8423315, z: 0.07302901}
+    m_Target: {x: 1.0101366, y: -1.5731512, z: -0.057642534}
     speed: 2
-    m_Value: {x: 0.28762043, y: -0.8112599, z: 0.072121575}
+    m_Value: {x: 0.18593158, y: -0.8423315, z: 0.07302901}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1067,9 +1067,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.9257721
+    m_Target: 5.6510797
     speed: 2
-    m_Value: 2.0165153
+    m_Value: 1.9257721
   m_Ortho:
     m_Target: 1
     speed: 2
