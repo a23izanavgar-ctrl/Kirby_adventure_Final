@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/map-ocean.unity
+    path: Assets/Scenes/map-ocean.unity
     guid: a8a8b61230486374d92b736cc328837f
   - enabled: 1
-    path: Assets/mapa-niveles.unity
+    path: Assets/Scenes/mapa-niveles.unity
     guid: 88a483f977f1c8a478a6b16afcdbc3db
   m_configObjects: {}
