@@ -38,12 +38,16 @@ public class Kirby : MonoBehaviour
 
     InputAction move_action;
     InputAction jump_action;
+    InputAction flotar_action;
 
     float timeFalling = 0;
 
     /** MOVIMIENTO **/
     [SerializeField] float speed;
     [SerializeField] float jumpImpulse;
+    [SerializeField] float flotarImpulse;
+    [SerializeField] float maxFloatTime = 3f;
+    [SerializeField] float floatTimer = 0f;
 
     Rigidbody2D rgb;
     Animator ator;
@@ -52,7 +56,8 @@ public class Kirby : MonoBehaviour
     {
         WALKING,
         JUMPING,
-        FALLING
+        FALLING,
+        FLOTAR
     };
 
     KIRBY_STATES currentState;
@@ -63,6 +68,7 @@ public class Kirby : MonoBehaviour
 
         move_action = actions.FindActionMap("Movement").FindAction("Move");
         jump_action = actions.FindActionMap("Movement").FindAction("Jump");
+        flotar_action = actions.FindActionMap("Movement").FindAction("Flotar");
 
         rgb = GetComponent<Rigidbody2D>();
         ator = GetComponent<Animator>();
@@ -84,11 +90,50 @@ public class Kirby : MonoBehaviour
             case KIRBY_STATES.FALLING:
                 Update_Falling_State();
                 break;
+
+            case KIRBY_STATES.FLOTAR:
+                UpdateFlotar_State();
+                break;
+
                 
         }
 
         Debug.Log(rgb.velocity.y);
     }
+
+    void UpdateFlotar_State()
+    {
+        // Mantener flotación mientras se mantenga el botón
+        if (flotar_action.IsPressed())
+        {
+            // OPCIÓN A: tipo Kirby (caída lenta)
+            rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
+            if (rgb.velocity.y > 0)
+            {
+                ator.SetFloat("SpeedYflotar", 1);
+            }
+
+            // OPCIÓN B: más tipo Flappy (impulsos)
+            // rgb.AddForce(Vector2.up * flotarImpulse, ForceMode2D.Force); 
+        }
+        else
+        {
+            // Si suelta el botón, vuelve a caer
+            currentState = KIRBY_STATES.FALLING;
+            ator.SetTrigger("Dejaflotar");
+            
+        }
+        if (flotar_action.IsPressed() && floatTimer < maxFloatTime)
+        {
+            floatTimer += Time.deltaTime;
+            rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
+        }
+        else
+        {
+            currentState = KIRBY_STATES.FALLING;
+        }
+    }
+
 
     void UpdateWalking_state()
     {
@@ -97,8 +142,11 @@ public class Kirby : MonoBehaviour
             currentState = KIRBY_STATES.JUMPING;
             rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
             ator.SetTrigger("HasJumped");
-           
-
+        }
+        if (flotar_action.WasPressedThisFrame())
+        {
+            currentState = KIRBY_STATES.FLOTAR;
+            ator.SetTrigger("HasFloated");
         }
     }
 
@@ -149,15 +197,21 @@ public class Kirby : MonoBehaviour
 
      void Update_Falling_State()
     {
-        if(rgb.velocity.y < 0)
-        {
-            ator.SetFloat("SpeedY", -1);
-        }
-
         
+            if (flotar_action.IsPressed())
+            {
+                currentState = KIRBY_STATES.FLOTAR;
+                return;
+            }
 
-        timeFalling += Time.deltaTime;
-            ator.SetFloat("TimeFalling", timeFalling);       
+            if (rgb.velocity.y < 0)
+            {
+                ator.SetFloat("SpeedY", -1);
+            }
+
+            timeFalling += Time.deltaTime;
+            ator.SetFloat("TimeFalling", timeFalling);
+       
 
     }
 }
