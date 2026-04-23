@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -258601031, guid: 39ebcc82ca3e26c4b90f082f7df1df90, type: 3}
+  m_Sprite: {fileID: -2109235406, guid: 94858fe0ea4fea242a8b0ba5a4bebddf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -403,9 +403,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.000907441
+    x: 0.00090826524
     y: 0.0019267823
-    width: 1.3284936
+    width: 1.3297004
     height: 0.7398844
   near clip plane: 0.3
   far clip plane: 1000
