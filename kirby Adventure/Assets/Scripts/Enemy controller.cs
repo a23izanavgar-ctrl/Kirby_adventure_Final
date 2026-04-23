@@ -10,6 +10,8 @@ public class Enemycontroller : MonoBehaviour
     [SerializeField]
     protected float speed = 0f;
 
+    [SerializeField]
+    protected int damage = 0;
 
     public int GetHealth ()
     {

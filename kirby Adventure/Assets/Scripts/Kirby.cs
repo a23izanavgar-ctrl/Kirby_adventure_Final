@@ -100,7 +100,7 @@ public class Kirby : MonoBehaviour
                 
         }
 
-        Debug.Log(rgb.velocity.y);
+
     }
 
     void UpdateFlotar_State()
