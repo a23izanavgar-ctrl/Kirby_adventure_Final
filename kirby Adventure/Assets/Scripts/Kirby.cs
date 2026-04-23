@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,14 +53,16 @@ public class Kirby : MonoBehaviour
     Rigidbody2D rgb;
     Animator ator;
 
-    
+    [SerializeField]
+    public int HP = 0;
 
     enum KIRBY_STATES
     {
         WALKING,
         JUMPING,
         FALLING,
-        FLOTAR
+        FLOTAR,
+        MUERTO
     };
 
     KIRBY_STATES currentState;
@@ -95,6 +98,9 @@ public class Kirby : MonoBehaviour
 
             case KIRBY_STATES.FLOTAR:
                 UpdateFlotar_State();
+                break;
+            case KIRBY_STATES.MUERTO:
+                Update_Muerto_state();
                 break;
 
                 
@@ -215,5 +221,22 @@ public class Kirby : MonoBehaviour
             ator.SetFloat("TimeFalling", timeFalling);
        
 
+    }
+
+    public void TakeDamage(int amount)
+    {
+        HP -= amount;
+        Debug.Log("HP restante: " + HP);
+
+        if (HP <= 0)
+        {
+            Update_Muerto_state();
+        }
+    }
+
+    void Update_Muerto_state()
+    {
+        currentState = KIRBY_STATES.MUERTO;
+        Destroy(gameObject);
     }
 }

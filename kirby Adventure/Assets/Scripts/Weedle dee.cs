@@ -12,7 +12,7 @@ public class WeedleDee : Enemycontroller
     private SpriteRenderer sr;
 
     [SerializeField]
-    ScriptableObject kirby;
+    Kirby kirby;
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class WeedleDee : Enemycontroller
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            
+            Kirby.instance.TakeDamage(damage);
         }
         Debug.Log("COLISIÓN CON: " + collision.gameObject.name);
 
