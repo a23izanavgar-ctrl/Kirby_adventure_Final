@@ -18,6 +18,8 @@ public class PuertaKirby : MonoBehaviour
 
     InputAction use_action;
 
+    [SerializeField] bool autoTP = false;
+
     bool KirbyTrigger;
 
     private void Start()
@@ -28,7 +30,7 @@ public class PuertaKirby : MonoBehaviour
 
     private void Update()
     {
-        if (use_action.WasPressedThisFrame() && KirbyTrigger)
+        if (use_action.WasPressedThisFrame() && KirbyTrigger || KirbyTrigger && autoTP)
         {
             Debug.Log("Entrando...");
             GameObject kirbyObj = Kirby.instance.gameObject; /** gracias al singleton de kirby*/
@@ -39,9 +41,10 @@ public class PuertaKirby : MonoBehaviour
 
 
             EntraKirbyPorLaPuerta(kirbyObj); /** ajustar camara */
-
-
         }
+
+
+        
     }
 
     public void EntraKirbyPorLaPuerta(GameObject kirbyObj)
