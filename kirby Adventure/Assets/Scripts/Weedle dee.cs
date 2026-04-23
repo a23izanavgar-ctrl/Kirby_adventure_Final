@@ -11,10 +11,14 @@ public class WeedleDee : Enemycontroller
 
     private SpriteRenderer sr;
 
+    [SerializeField]
+    ScriptableObject kirby;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        Debug.Log(damage);
     }
 
     void Flip()
@@ -29,10 +33,17 @@ public class WeedleDee : Enemycontroller
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            
+        }
         Debug.Log("COLISIÓN CON: " + collision.gameObject.name);
 
         Flip();
     }
+
+
 
     
 }
