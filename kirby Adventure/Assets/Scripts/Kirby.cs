@@ -52,7 +52,7 @@ public class Kirby : MonoBehaviour
     Rigidbody2D rgb;
     Animator ator;
 
-    int HP = 6;
+    
 
     enum KIRBY_STATES
     {
