@@ -52,6 +52,8 @@ public class Kirby : MonoBehaviour
     Rigidbody2D rgb;
     Animator ator;
 
+    
+
     enum KIRBY_STATES
     {
         WALKING,
