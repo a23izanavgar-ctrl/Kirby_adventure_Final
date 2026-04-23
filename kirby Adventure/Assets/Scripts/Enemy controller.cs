@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemycontroller : MonoBehaviour
 {
     [SerializeField]
-   protected int health = 0;
+    protected int health = 0;
 
     [SerializeField]
     protected float speed = 0f;

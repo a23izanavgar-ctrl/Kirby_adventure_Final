@@ -25,6 +25,7 @@ public class WeedleDee : Enemycontroller
     {
         speed *= -1;
         sr.flipX = !sr.flipX;
+        
     }
     void FixedUpdate()
     {
