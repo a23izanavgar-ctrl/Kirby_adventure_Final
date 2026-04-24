@@ -11,8 +11,7 @@ public class WeedleDee : Enemycontroller
 
     private SpriteRenderer sr;
 
-    [SerializeField]
-    Kirby kirby;
+    
 
     void Start()
     {
