@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e0cd28e9a369d0438f78234060432c9
+guid: c56d52d28ad9a464ea739b85e015ff2b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,10 +149,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NES - Kirby's Adventure - Stages - Orange Ocean 3_0
+      name: waterfall_0
       rect:
         serializedVersion: 2
-        x: 800
+        x: 824
         y: 384
         width: 16
         height: 16
@@ -163,17 +163,80 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0251187ecdf73934db50f135bf96d742
-      internalID: -899168186
+      spriteID: e71799ed997f27a468e77a26c9077ad9
+      internalID: -820890771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Kirby's Adventure - Stages - Orange Ocean 3_5
+      name: waterfall_1
       rect:
         serializedVersion: 2
-        x: 800
+        x: 842
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b14324d001d1b439ed8c39968f1e99
+      internalID: 2062542604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_2
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fe1d9f89cdc214aa6a875102a35a8f
+      internalID: 2093723756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_3
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b241a54a498f614bbdd3d325009d50b
+      internalID: 1905540093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_4
+      rect:
+        serializedVersion: 2
+        x: 824
         y: 360
         width: 16
         height: 16
@@ -184,17 +247,80 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8a54e10270bfb74ab2691018779807f
-      internalID: 1820442382
+      spriteID: 85e42398ffd8110418b0aa47e1e80284
+      internalID: -527198452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Kirby's Adventure - Stages - Orange Ocean 3_10
+      name: waterfall_5
       rect:
         serializedVersion: 2
-        x: 800
+        x: 842
+        y: 360
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71dbf1b6f0ccc24b9fac4c9f9db7385
+      internalID: 2053076816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_6
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 360
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ace61ab03a6974ab40986b565081be
+      internalID: 381930036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_7
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 360
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a18c3ece6c457b49a4f40401dc54848
+      internalID: 2118996430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_8
+      rect:
+        serializedVersion: 2
+        x: 824
         y: 336
         width: 16
         height: 16
@@ -205,17 +331,80 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f3a0aaf09e88b34cb7b82909627ab99
-      internalID: -375832808
+      spriteID: bb4c366de64a3d845b2fd44ecee328ec
+      internalID: -1676592476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Kirby's Adventure - Stages - Orange Ocean 3_15
+      name: waterfall_9
       rect:
         serializedVersion: 2
-        x: 800
+        x: 842
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a13d20907f721149add92db367c1879
+      internalID: 1007401146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_10
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7683fe82f6f0c4a98b3bb949c521b9
+      internalID: 114443715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_11
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6add8f4120a424c4eb9d9dd0262e6f57
+      internalID: -337903432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_12
+      rect:
+        serializedVersion: 2
+        x: 824
         y: 312
         width: 16
         height: 16
@@ -226,17 +415,80 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 297cd7de64739874ca99558763da9b4f
-      internalID: 1576001382
+      spriteID: cb43564767dbea14b995384c25eb9dc4
+      internalID: -300251705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Kirby's Adventure - Stages - Orange Ocean 3_20
+      name: waterfall_13
       rect:
         serializedVersion: 2
-        x: 800
+        x: 842
+        y: 312
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bffcf3d2825b554b9c48c7f356ecfc4
+      internalID: -306394462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_14
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 312
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e332e69c10c59c40a0f8b42da016a3a
+      internalID: -290508359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_15
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 312
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc660d90a90cc0469032a1c953eda9e
+      internalID: -1673091198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_16
+      rect:
+        serializedVersion: 2
+        x: 824
         y: 296
         width: 16
         height: 8
@@ -247,8 +499,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7666e4cd2e98d6543a00018cbe413bdb
-      internalID: -1524370555
+      spriteID: 9bb538ee16491b1479c6aec3cde66e35
+      internalID: 1905045915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_17
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 296
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf4388102a901f4daa8503ced4c4831
+      internalID: 1867730739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_18
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 296
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad27d9b43789b1c48a9a093250584851
+      internalID: 1127136644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_19
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 296
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525922941dd153d438eff688e455e3a2
+      internalID: -635296231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 248
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30948def091ece46b56c1e110b9cb7f
+      internalID: 1445963846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_21
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 248
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d8d374f946d764ab111a7b064b5940
+      internalID: -1180551925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_22
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 248
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2094d97a67423f4eb55dd47ed89715b
+      internalID: -638585644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall_23
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 248
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c5ecb84c7ac8645ad5c4b0416a10c7
+      internalID: 890468962
       vertices: []
       indices: 
       edges: []
@@ -264,31 +663,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_0: -899168186
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_1: -1147603742
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_10: -375832808
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_11: 471712336
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_12: -1689046759
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_13: 511734930
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_14: 276704888
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_15: 1576001382
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_16: 1434169811
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_17: 775163655
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_18: -760008528
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_19: -1198600378
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_2: 470234430
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_20: -1524370555
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_21: 238741398
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_22: -1250040944
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_23: -557999185
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_24: 608451603
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_3: -392829397
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_4: -690090920
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_5: 1820442382
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_6: -250070812
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_7: -1679765403
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_8: 1403267198
-      NES - Kirby's Adventure - Stages - Orange Ocean 3_9: 527061093
+      waterfall_0: -820890771
+      waterfall_1: 2062542604
+      waterfall_10: 114443715
+      waterfall_11: -337903432
+      waterfall_12: -300251705
+      waterfall_13: -306394462
+      waterfall_14: -290508359
+      waterfall_15: -1673091198
+      waterfall_16: 1905045915
+      waterfall_17: 1867730739
+      waterfall_18: 1127136644
+      waterfall_19: -635296231
+      waterfall_2: 2093723756
+      waterfall_20: 1445963846
+      waterfall_21: -1180551925
+      waterfall_22: -638585644
+      waterfall_23: 890468962
+      waterfall_3: 1905540093
+      waterfall_4: -527198452
+      waterfall_5: 2053076816
+      waterfall_6: 381930036
+      waterfall_7: 2118996430
+      waterfall_8: -1676592476
+      waterfall_9: 1007401146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

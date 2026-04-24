@@ -133,6 +133,17 @@
                 },
                 {
                     "name": "",
+                    "id": "09b56711-d4ff-4e07-9f17-6dfda34b864c",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ee807003-4b62-4591-bbc6-0696c337732c",
                     "path": "<Keyboard>/w",
                     "interactions": "",
