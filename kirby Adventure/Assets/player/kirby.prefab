@@ -111,7 +111,8 @@ MonoBehaviour:
   flotarImpulse: 1
   maxFloatTime: 3
   floatTimer: 0
-  HP: 0
+  HP: 6
+  RangoAbsoreber: {fileID: 6442623238846032790}
 --- !u!50 &1918346586333759246
 Rigidbody2D:
   serializedVersion: 4
@@ -359,7 +360,7 @@ GameObject:
   - component: {fileID: 1938370056040820494}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 4302931229899399273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5820001, y: 1.4330001, z: -3.4392219}
+  m_LocalPosition: {x: 0.6300001, y: 0.27999997, z: -3.4392219}
   m_LocalScale: {x: 0.066668, y: 0.066667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,10 +407,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00090826524
-    y: 0.0019267823
-    width: 1.3297004
-    height: 0.7398844
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -668,6 +669,7 @@ GameObject:
   - component: {fileID: 6183444729316201333}
   - component: {fileID: 5480106626034559357}
   - component: {fileID: 8962054679500985667}
+  - component: {fileID: 2543460657809915831}
   m_Layer: 0
   m_Name: Absorber rango
   m_TagString: Untagged
@@ -684,7 +686,7 @@ Transform:
   m_GameObject: {fileID: 6442623238846032790}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.616, y: 0, z: -3.324521}
+  m_LocalPosition: {x: 0.601, y: 0, z: -3.324521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -771,7 +773,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -790,3 +792,15 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &2543460657809915831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442623238846032790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5400832b6006cc409e1dcfc4cf6a425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
