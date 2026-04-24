@@ -2352,6 +2352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882318801}
   - component: {fileID: 1882318802}
+  - component: {fileID: 1882318803}
   m_Layer: 0
   m_Name: GameObject-puerta-3
   m_TagString: Untagged
@@ -2419,6 +2420,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1882318803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882318800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81a1b2161e8058419e0f9c384cda8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: nivel cambiado --> vegetable valley
+  mapa: mapa-bosque
+  NextPosition: {x: -4.98, y: 1.38}
+  newMinX: -1
+  newMaxX: 5
+  newMinY: 2.1
+  newMaxY: 2.1
+  actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!1 &2021616408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,11 +2594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4029728797095949296, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07
+      value: 0.882
       objectReference: {fileID: 0}
     - target: {fileID: 4029728797095949296, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.241
+      value: -0.088
       objectReference: {fileID: 0}
     - target: {fileID: 4029728797095949296, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_LocalPosition.z
