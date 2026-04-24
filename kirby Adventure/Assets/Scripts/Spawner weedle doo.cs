@@ -4,17 +4,46 @@ using UnityEngine;
 
 public class Spawnerweedledoo : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
-    bool hasSpawned = false;
-    void OnBecameVisible()
-    {
-        if (hasSpawned) return;
+    [SerializeField]    
+    public GameObject enemyPrefab;
 
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        hasSpawned = true;
+    private GameObject currentEnemy;
+
+    
+    private Camera kirbyCamera;
+
+    void Update()
+    {
+        // Buscar la cámara si aún no la tenemos
+        if (kirbyCamera == null)
+        {
+            kirbyCamera = Camera.main;
+            return; // esperamos al siguiente frame
+        }
+
+        if (IsVisibleToKirbyCamera())
+        {
+            if (currentEnemy == null)
+            {
+                currentEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            }
+        }
+        else
+        {
+            if (currentEnemy != null)
+            {
+                Destroy(currentEnemy);
+                currentEnemy = null;
+            }
+        }
     }
 
-    
+    bool IsVisibleToKirbyCamera()
+    {
+        Vector3 viewportPos = kirbyCamera.WorldToViewportPoint(transform.position);
 
-    
+        return viewportPos.x > -0.2f && viewportPos.x < 1.2f &&
+               viewportPos.y > -0.2f && viewportPos.y < 1.2f;
+    }
 }
+
