@@ -2609,6 +2609,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4302931229899399273, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302931229899399273, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802359900782939771, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.63000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802359900782939771, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158274746254124105, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7655679927022616723, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
       value: 0
