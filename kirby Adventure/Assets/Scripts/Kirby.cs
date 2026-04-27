@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +41,7 @@ public class Kirby : MonoBehaviour
     InputAction move_action;
     InputAction jump_action;
     InputAction flotar_action;
+    InputAction Absorber_action;
 
     float timeFalling = 0;
 
@@ -56,13 +58,19 @@ public class Kirby : MonoBehaviour
     [SerializeField]
     public int HP = 0;
 
+
+    [SerializeField]
+    GameObject RangoAbsoreber;
+
     enum KIRBY_STATES
     {
         WALKING,
         JUMPING,
         FALLING,
         FLOTAR,
-        MUERTO
+        MUERTO,
+        ABSORBER,
+
     };
 
     KIRBY_STATES currentState;
@@ -74,6 +82,8 @@ public class Kirby : MonoBehaviour
         move_action = actions.FindActionMap("Movement").FindAction("Move");
         jump_action = actions.FindActionMap("Movement").FindAction("Jump");
         flotar_action = actions.FindActionMap("Movement").FindAction("Flotar");
+        Absorber_action = actions.FindActionMap("Movement").FindAction("Ability");
+
 
         rgb = GetComponent<Rigidbody2D>();
         ator = GetComponent<Animator>();
@@ -102,6 +112,10 @@ public class Kirby : MonoBehaviour
             case KIRBY_STATES.MUERTO:
                 Update_Muerto_state();
                 break;
+            case KIRBY_STATES.ABSORBER:
+                Update_Absorber_State();
+                break;
+
 
                 
         }
@@ -155,6 +169,11 @@ public class Kirby : MonoBehaviour
         {
             currentState = KIRBY_STATES.FLOTAR;
             ator.SetTrigger("HasFloated");
+        }
+        if (Absorber_action.WasPressedThisFrame())
+        {
+            currentState = KIRBY_STATES.ABSORBER;
+            // falta poner animacion
         }
     }
 
@@ -238,5 +257,18 @@ public class Kirby : MonoBehaviour
     {
         currentState = KIRBY_STATES.MUERTO;
         Destroy(gameObject);
+    }
+
+    void Update_Absorber_State()
+    {
+        if (Absorber_action.IsPressed())
+        {
+            RangoAbsoreber.SetActive(true);
+        }
+        else
+        {
+            RangoAbsoreber.SetActive(false);
+            currentState = KIRBY_STATES.WALKING;
+        }
     }
 }
