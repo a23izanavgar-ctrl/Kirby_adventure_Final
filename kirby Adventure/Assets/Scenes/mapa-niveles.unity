@@ -3194,6 +3194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weedle dee
       objectReference: {fileID: 0}
+    - target: {fileID: 5937110223070211620, guid: f481ad5a44a32e246bbe44516814d085, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103257970940393880, guid: f481ad5a44a32e246bbe44516814d085, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9970732
@@ -4646,7 +4650,7 @@ SpriteRenderer:
   m_Size: {x: 0.26, y: 0.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2034105904
@@ -4785,19 +4789,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7655679927022616723, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.023593467
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7655679927022616723, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0019267823
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7655679927022616723, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9528131
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7655679927022616723, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.99421966
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
