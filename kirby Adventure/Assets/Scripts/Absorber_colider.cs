@@ -8,14 +8,7 @@ public class Absorber_colider : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            WeedleDee enemy = other.GetComponent<WeedleDee>();
-
-            if (enemy != null)
-            {
-                enemy.NotifyDeath();
-            }
-
-            Destroy(other.gameObject);
+            Destroy(other.gameObject); // o absorber lógica
             Debug.Log("Enemigo absorbido");
         }
     }

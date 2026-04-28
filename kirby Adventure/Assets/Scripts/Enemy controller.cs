@@ -13,7 +13,7 @@ public class Enemycontroller : MonoBehaviour
     [SerializeField]
     protected int damage = 0;
 
-    public int GetHealth()
+    public int GetHealth ()
     {
         return health;
     }
@@ -22,7 +22,5 @@ public class Enemycontroller : MonoBehaviour
     {
         return speed;
     }
-
-
 
 }

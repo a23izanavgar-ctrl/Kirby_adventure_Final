@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class WeedleDee : Enemycontroller
@@ -37,31 +36,14 @@ public class WeedleDee : Enemycontroller
         if (collision.gameObject.CompareTag("Player"))
         {
             Kirby.instance.TakeDamage(damage);
-            health -= 1;
         }
         Debug.Log("COLISIÓN CON: " + collision.gameObject.name);
 
         Flip();
     }
 
-    private Spawnerweedledoo spawner;
-
-    public void SetSpawner(Spawnerweedledoo sp)
-    {
-        spawner = sp;
-    }
-
-    public void NotifyDeath()
-    {
-        if (spawner != null)
-        {
-            spawner.EnemyDefeated();
-        }
-    }
 
 
-
-
-
+    
 }
 
