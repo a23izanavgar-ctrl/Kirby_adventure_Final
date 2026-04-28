@@ -12,8 +12,11 @@ public class Spawnerweedledoo : MonoBehaviour
 
     private Camera kirbyCamera;
 
+<<<<<<< HEAD
 
     private bool enemyDefeated = false;
+=======
+>>>>>>> parent of 1234010 (Merge branch 'Game' into Oliver)
     void Update()
     {
         if (kirbyCamera == null)
@@ -51,10 +54,13 @@ public class Spawnerweedledoo : MonoBehaviour
         return viewportPos.x > -0.2f && viewportPos.x < 1.2f &&
                viewportPos.y > -0.2f && viewportPos.y < 1.2f;
     }
+<<<<<<< HEAD
     public void EnemyDefeated()
     {
         enemyDefeated = true;
     }
+=======
+>>>>>>> parent of 1234010 (Merge branch 'Game' into Oliver)
 }
 
     
