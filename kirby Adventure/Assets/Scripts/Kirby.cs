@@ -58,7 +58,6 @@ public class Kirby : MonoBehaviour
     [SerializeField]
     public int HP = 0;
 
-    public event System.Action OnDamageTaken;
 
     [SerializeField]
     GameObject RangoAbsoreber;
@@ -247,8 +246,6 @@ public class Kirby : MonoBehaviour
     {
         HP -= amount;
         Debug.Log("HP restante: " + HP);
-
-        OnDamageTaken?.Invoke(); /** notificar al HUD */
 
         if (HP <= 0)
         {
