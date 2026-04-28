@@ -2812,14 +2812,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-<<<<<<< HEAD
---- !u!1 &1272019133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 691546328125608575, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-  m_PrefabInstance: {fileID: 3064005788231975458}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1272019140
-=======
 --- !u!1 &1343537454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,20 +2850,11 @@ RectTransform:
   m_SizeDelta: {x: 329.8116, y: 98.9802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343537456
->>>>>>> Oliver
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1272019133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dea1661bc9b75d41b5df856132e6e23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
   m_GameObject: {fileID: 1343537454}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2904,7 +2887,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343537454}
   m_CullTransparentMesh: 1
->>>>>>> Oliver
 --- !u!1 &1401946549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,19 +4801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-<<<<<<< HEAD
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 691546328125608575, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1272019140}
-=======
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4029728797095949296, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
       insertIndex: -1
       addedObject: {fileID: 806017518}
     m_AddedComponents: []
->>>>>>> Oliver
   m_SourcePrefab: {fileID: 100100000, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
