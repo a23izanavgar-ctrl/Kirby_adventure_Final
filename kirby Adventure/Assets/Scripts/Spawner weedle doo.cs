@@ -12,6 +12,9 @@ public class Spawnerweedledoo : MonoBehaviour
     
     private Camera kirbyCamera;
 
+    float spawnCooldown = 999f; // muy largo
+    float timer = 0f;
+
     void Update()
     {
         // Buscar la cámara si aún no la tenemos
@@ -36,6 +39,17 @@ public class Spawnerweedledoo : MonoBehaviour
                 currentEnemy = null;
             }
         }
+
+        timer += Time.deltaTime;
+
+        if (IsVisibleToKirbyCamera())
+        {
+            if (currentEnemy == null && timer >= spawnCooldown)
+            {
+                currentEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+                timer = 0f;
+            }
+        }
     }
 
     bool IsVisibleToKirbyCamera()
@@ -45,5 +59,6 @@ public class Spawnerweedledoo : MonoBehaviour
         return viewportPos.x > -0.2f && viewportPos.x < 1.2f &&
                viewportPos.y > -0.2f && viewportPos.y < 1.2f;
     }
+
 }
 
