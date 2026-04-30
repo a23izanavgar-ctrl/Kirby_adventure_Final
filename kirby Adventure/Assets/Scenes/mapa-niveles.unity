@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: nivel cambiado --> Whispy Woods
   mapa: boss-arbol
-  NextPosition: {x: 0, y: 0}
+  NextPosition: {x: -0.5, y: 2}
   newMinX: 0.226
   newMaxX: 0.226
   newMinY: -2.35
