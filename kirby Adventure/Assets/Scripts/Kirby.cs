@@ -1,8 +1,6 @@
-using System;
+ï»¿using System;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class Kirby : MonoBehaviour
 {
@@ -56,16 +54,11 @@ public class Kirby : MonoBehaviour
     public int HP = 0;
     public event Action OnDamageTaken;
 
-<<<<<<< HEAD
-    public event System.Action OnDamageTaken;
-    public event System.Action OnDeadStart;
-=======
     // =========================
-    // ABSORCIÓN
+    // ABSORCIÃ“N
     // =========================
     [SerializeField] GameObject RangoAbsoreber;
     bool haAbsorbido;
->>>>>>> Izan
 
     // =========================
     // ESTRELLA
@@ -73,26 +66,11 @@ public class Kirby : MonoBehaviour
     [SerializeField] GameObject estrella;
     [SerializeField] float velocidadEstrella = 10f;
 
-<<<<<<< HEAD
-    [SerializeField] string map_gameover;
-    bool gameOverLoaded = false;
-
-
-    enum KIRBY_STATES
-    {
-        WALKING,
-        JUMPING,
-        FALLING,
-        FLOTAR,
-        MUERTO,
-        ABSORBER,
-=======
     // =========================
-    // ESTADOS
+    // ESTADOS (IZAN SYSTEM)
     // =========================
     enum MovementState { Walking, Jumping, Falling, Floating }
     enum AbilityState { Idle, Absorbing, HasPower }
->>>>>>> Izan
 
     MovementState moveState;
     AbilityState abilityState;
@@ -121,115 +99,9 @@ public class Kirby : MonoBehaviour
     // =========================
     void Update()
     {
-<<<<<<< HEAD
-        switch (currentState)
-        {
-            case KIRBY_STATES.WALKING:
-                UpdateWalking_state();
-                break;
-
-            case KIRBY_STATES.JUMPING:
-                UpdateJumping_state();
-                break;
-            case KIRBY_STATES.FALLING:
-                Update_Falling_State();
-                break;
-
-            case KIRBY_STATES.FLOTAR:
-                UpdateFlotar_State();
-                break;
-            case KIRBY_STATES.MUERTO:
-                Update_Muerto_state();
-                break;
-            case KIRBY_STATES.ABSORBER:
-                Update_Absorber_State();
-                break;
-
-
-
-        }
-
-
-    }
-
-    void UpdateFlotar_State()
-    {
-        // Mantener flotación mientras se mantenga el botón
-        if (flotar_action.IsPressed())
-        {
-            // OPCIÓN A: tipo Kirby (caída lenta)
-            rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
-            if (rgb.velocity.y > 0)
-            {
-                ator.SetFloat("SpeedYflotar", 1);
-            }
-
-            // OPCIÓN B: más tipo Flappy (impulsos)
-            // rgb.AddForce(Vector2.up * flotarImpulse, ForceMode2D.Force); 
-        }
-        else
-        {
-            // Si suelta el botón, vuelve a caer
-            currentState = KIRBY_STATES.FALLING;
-            ator.SetTrigger("Dejaflotar");
-
-        }
-        if (flotar_action.IsPressed() && floatTimer < maxFloatTime)
-        {
-            floatTimer += Time.deltaTime;
-            rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
-        }
-        else
-        {
-            currentState = KIRBY_STATES.FALLING;
-        }
-    }
-
-
-    void UpdateWalking_state()
-    {
-        if (jump_action.WasPressedThisFrame())
-        {
-            currentState = KIRBY_STATES.JUMPING;
-            rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
-            ator.SetTrigger("HasJumped");
-        }
-        if (flotar_action.WasPressedThisFrame())
-        {
-            currentState = KIRBY_STATES.FLOTAR;
-            ator.SetTrigger("HasFloated");
-        }
-        if (Absorber_action.WasPressedThisFrame())
-        {
-            currentState = KIRBY_STATES.ABSORBER;
-            // falta poner animacion
-        }
-    }
-
-    void UpdateJumping_state()
-    {
-        if (rgb.velocity.y < 0)
-        {
-            ator.SetTrigger("Voltereta");
-            currentState = KIRBY_STATES.FALLING;
-        }
-
-
-        //Mirar cuando la velocidad en Y empieze a ser negativa para dar la voltereta.
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        currentState = KIRBY_STATES.WALKING;
-        ator.SetBool("IsGrounded", true);
-        timeFalling = 0;
-
-=======
         UpdateMovement();
         UpdateAbility();
-        UpdateAnimator(); // ? CLAVE
->>>>>>> Izan
+        UpdateAnimator();
     }
 
     void FixedUpdate()
@@ -268,30 +140,10 @@ public class Kirby : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-    void Update_Falling_State()
-    {
-
-        if (flotar_action.IsPressed())
-        {
-            currentState = KIRBY_STATES.FLOTAR;
-            return;
-        }
-
-        if (rgb.velocity.y < 0)
-        {
-            ator.SetFloat("SpeedY", -1);
-        }
-
-        timeFalling += Time.deltaTime;
-        ator.SetFloat("TimeFalling", timeFalling);
-
-=======
     void Moverse()
     {
         float dir = move_action.ReadValue<float>();
         rgb.velocity = new Vector2(dir * speed, rgb.velocity.y);
->>>>>>> Izan
 
         if (dir != 0)
             transform.localScale = new Vector3(Mathf.Sign(dir), 1, 1);
@@ -299,15 +151,8 @@ public class Kirby : MonoBehaviour
 
     void UpdateWalking_state()
     {
-        float dir = move_action.ReadValue<float>();
-
         if (jump_action.WasPressedThisFrame())
         {
-<<<<<<< HEAD
-            gameOverLoaded = true;
-            Update_Muerto_state();
-            SceneManager.LoadScene(map_gameover);
-=======
             ResetTriggers();
             ator.SetTrigger("HasJumped");
 
@@ -326,17 +171,11 @@ public class Kirby : MonoBehaviour
         if (Absorber_action.WasPressedThisFrame())
         {
             abilityState = AbilityState.Absorbing;
->>>>>>> Izan
         }
     }
 
     void UpdateJumping_state()
     {
-<<<<<<< HEAD
-        OnDeadStart?.Invoke();
-        currentState = KIRBY_STATES.MUERTO;
-        Destroy(gameObject);
-=======
         if (rgb.velocity.y < 0)
         {
             moveState = MovementState.Falling;
@@ -395,15 +234,12 @@ public class Kirby : MonoBehaviour
                 Update_Absorbido_State();
                 break;
         }
->>>>>>> Izan
     }
 
     void Update_Absorber_State()
     {
         if (Absorber_action.IsPressed())
-        {
             RangoAbsoreber.SetActive(true);
-        }
         else
         {
             RangoAbsoreber.SetActive(false);
@@ -424,17 +260,13 @@ public class Kirby : MonoBehaviour
     }
 
     // ======================================================
-    // ANIMATOR (?? CLAVE DEL SISTEMA)
+    // ANIMATOR
     // ======================================================
     void UpdateAnimator()
     {
-        float speedX = Mathf.Abs(move_action.ReadValue<float>());
-        float speedY = rgb.velocity.y;
-
-        ator.SetFloat("SpeedX", speedX);
-        ator.SetFloat("SpeedY", speedY);
+        ator.SetFloat("SpeedX", Mathf.Abs(move_action.ReadValue<float>()));
+        ator.SetFloat("SpeedY", rgb.velocity.y);
         ator.SetFloat("TimeFalling", timeFalling);
-
         ator.SetBool("IsGrounded", isGrounded);
     }
 
