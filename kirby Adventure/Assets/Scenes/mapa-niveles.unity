@@ -1714,10 +1714,10 @@ MonoBehaviour:
   debug: nivel cambiado --> Whispy Woods
   mapa: boss-arbol
   NextPosition: {x: 0, y: 0}
-  newMinX: -3.25
-  newMaxX: 3.25
-  newMinY: 2
-  newMaxY: 2
+  newMinX: 0.226
+  newMaxX: 0.226
+  newMinY: -2.35
+  newMaxY: 1.4
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
 --- !u!1 &797479213
 GameObject:
