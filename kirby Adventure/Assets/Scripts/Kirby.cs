@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Kirby : MonoBehaviour
@@ -118,7 +119,7 @@ public class Kirby : MonoBehaviour
                 break;
 
 
-                
+
         }
 
 
@@ -144,7 +145,7 @@ public class Kirby : MonoBehaviour
             // Si suelta el botón, vuelve a caer
             currentState = KIRBY_STATES.FALLING;
             ator.SetTrigger("Dejaflotar");
-            
+
         }
         if (flotar_action.IsPressed() && floatTimer < maxFloatTime)
         {
@@ -183,9 +184,9 @@ public class Kirby : MonoBehaviour
         if (rgb.velocity.y < 0)
         {
             ator.SetTrigger("Voltereta");
-            currentState = KIRBY_STATES.FALLING; 
+            currentState = KIRBY_STATES.FALLING;
         }
-        
+
 
         //Mirar cuando la velocidad en Y empieze a ser negativa para dar la voltereta.
     }
@@ -196,7 +197,7 @@ public class Kirby : MonoBehaviour
         currentState = KIRBY_STATES.WALKING;
         ator.SetBool("IsGrounded", true);
         timeFalling = 0;
-        
+
     }
 
     void FixedUpdate()
@@ -223,23 +224,23 @@ public class Kirby : MonoBehaviour
         }
     }
 
-     void Update_Falling_State()
+    void Update_Falling_State()
     {
-        
-            if (flotar_action.IsPressed())
-            {
-                currentState = KIRBY_STATES.FLOTAR;
-                return;
-            }
 
-            if (rgb.velocity.y < 0)
-            {
-                ator.SetFloat("SpeedY", -1);
-            }
+        if (flotar_action.IsPressed())
+        {
+            currentState = KIRBY_STATES.FLOTAR;
+            return;
+        }
 
-            timeFalling += Time.deltaTime;
-            ator.SetFloat("TimeFalling", timeFalling);
-       
+        if (rgb.velocity.y < 0)
+        {
+            ator.SetFloat("SpeedY", -1);
+        }
+
+        timeFalling += Time.deltaTime;
+        ator.SetFloat("TimeFalling", timeFalling);
+
 
     }
 
