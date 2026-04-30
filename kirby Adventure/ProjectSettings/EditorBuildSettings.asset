@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mapa-bosque.unity
     guid: c6e9e6f66041139488e61565e2a4ff92
+  - enabled: 1
+    path: Assets/Scenes/Mapa-Muerte.unity
+    guid: 359d1fb90ae9a7544b668b864d0cab78
+  - enabled: 1
+    path: Assets/Scenes/boss-arbol.unity
+    guid: 752e9a4edfc3c8e43a7a2b7f2099b259
   m_configObjects: {}

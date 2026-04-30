@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Kirby : MonoBehaviour
 {
@@ -59,9 +60,14 @@ public class Kirby : MonoBehaviour
     public int HP = 0;
 
     public event System.Action OnDamageTaken;
+    public event System.Action OnDeadStart;
 
     [SerializeField]
     GameObject RangoAbsoreber;
+
+    [SerializeField] string map_gameover;
+    bool gameOverLoaded = false;
+
 
     enum KIRBY_STATES
     {
@@ -252,12 +258,15 @@ public class Kirby : MonoBehaviour
 
         if (HP <= 0)
         {
+            gameOverLoaded = true;
             Update_Muerto_state();
+            SceneManager.LoadScene(map_gameover);
         }
     }
 
     void Update_Muerto_state()
     {
+        OnDeadStart?.Invoke();
         currentState = KIRBY_STATES.MUERTO;
         Destroy(gameObject);
     }
