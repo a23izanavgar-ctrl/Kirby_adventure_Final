@@ -1,15 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Absorber_colider : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (!Kirby.instance) return;
+
+        // Solo enemigos
+        if (!other.CompareTag("Enemy")) return;
+
+        // Comprobamos estado REAL del Kirby
+        if (Kirby.instance.IsAbsorbing())
         {
-            Destroy(other.gameObject); // o absorber lógica
-            Debug.Log("Enemigo absorbido");
+            Destroy(other.gameObject);
+            Kirby.instance.OnAbsorbSuccess();
         }
     }
 }

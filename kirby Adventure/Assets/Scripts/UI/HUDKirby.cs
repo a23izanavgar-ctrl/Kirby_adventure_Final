@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,8 +9,9 @@ public class HUDKirby : MonoBehaviour
     [SerializeField] Image goal_image;
     [SerializeField] Image byebye_image;
 
-    [SerializeField] Animator animate;
+    [SerializeField] Animator anim;
 
+<<<<<<< HEAD
 
     /** ---[HP]----------------------------------- */
 
@@ -35,38 +33,75 @@ public class HUDKirby : MonoBehaviour
     bool mostrar = false;
 
     // Start is called before the first frame update
+=======
+    [Header("HP")]
+    [SerializeField] Image[] lifePoints;
+
+    float timer;
+    bool showing;
+
+>>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
     void Start()
     {
-        animate.enabled = false;
-
+        anim.enabled = false;
         ouch_image.enabled = false;
         miss_image.enabled = false;
         goal_image.enabled = false;
         byebye_image.enabled = false;
 
+<<<<<<< HEAD
         /** subscribirse al evento */
         Kirby.instance.OnDamageTaken += MostrarOuch;
         Kirby.instance.OnDeadStart += MostrarGameOver;
         Kirby.instance.OnGoalGoaled += MostrarGoal;
         Kirby.instance.OnByeBye += MostrarByeBye;
+=======
+        if (Kirby.instance != null)
+        {
+            Kirby.instance.OnDamageTaken += ShowOuch;
+           
+        }
+>>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
     }
 
-    void MostrarOuch()
+    void OnDestroy()
     {
+<<<<<<< HEAD
         mostrar = true;
         timer = normal_image_time;
-        ouch_image.enabled = true;
-        animate.enabled = true;
+=======
+        if (Kirby.instance != null)
+        {
+            Kirby.instance.OnDamageTaken -= ShowOuch;
+            
+        }
     }
 
-    void MostrarGameOver()
+    void ShowOuch()
     {
+        showing = true;
+        timer = image_time;
+
+>>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
+        ouch_image.enabled = true;
+        anim.enabled = true;
+    }
+
+    void ShowGameOver()
+    {
+<<<<<<< HEAD
         mostrar = true;
         timer = super_image_time;
+=======
+        showing = true;
+        timer = 10f;
+
+>>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
         miss_image.enabled = true;
-        animate.enabled = true;
+        anim.enabled = true;
     }
 
+<<<<<<< HEAD
     void MostrarGoal()
     {
         mostrar = true;
@@ -82,16 +117,19 @@ public class HUDKirby : MonoBehaviour
     }
 
     // Update is called once per frame
+=======
+>>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
     void Update()
     {
-        if (mostrar)
+        if (showing)
         {
-            timer -= Time.deltaTime; /** tiempo - deltaTime */
+            timer -= Time.deltaTime;
 
-            if (timer <= 0f)
+            if (timer <= 0)
             {
-                animate.enabled = false;
-                mostrar = false;
+                showing = false;
+                anim.enabled = false;
+
                 ouch_image.enabled = false;
                 miss_image.enabled = false;
                 goal_image.enabled = false;
@@ -99,18 +137,19 @@ public class HUDKirby : MonoBehaviour
             }
         }
 
-        UpdateKirbyLifeState();
+        UpdateHP();
     }
 
-    void UpdateKirbyLifeState()
+    void UpdateHP()
     {
+        int hp = Mathf.Max(0, Kirby.instance.HP);
+
         for (int i = 0; i < lifePoints.Length; i++)
         {
-            //i-> 0 lifePoints[0] (el primer punto de vida) tiene enabled = Kirby.instance.HP > 0;
-            //Es decir, si tiene 0 de vida, está desactivado porque  Kirby.instance.HP > 0--> False , en caso contrario 
-            lifePoints[i].enabled = Kirby.instance.HP > i;
+            lifePoints[i].enabled = hp > i;
         }
     }
+<<<<<<< HEAD
 
     /** CORRUTINAS DE FADE */
 
@@ -144,3 +183,6 @@ public class HUDKirby : MonoBehaviour
         }
     }
 }
+=======
+}
+>>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
