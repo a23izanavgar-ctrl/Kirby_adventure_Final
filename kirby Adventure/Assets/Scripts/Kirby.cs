@@ -62,13 +62,15 @@ public class Kirby : MonoBehaviour
 
     public event System.Action OnDamageTaken;
     public event System.Action OnDeadStart;
+    public event System.Action OnGoalGoaled;
+    public event System.Action OnByeBye;
+
 
     [SerializeField]
     GameObject RangoAbsoreber;
 
     [SerializeField] string map_gameover;
     bool gameOverLoaded = false;
-
 
     enum KIRBY_STATES
     {
@@ -248,6 +250,16 @@ public class Kirby : MonoBehaviour
         ator.SetFloat("TimeFalling", timeFalling);
 
 
+    }
+
+    public void GoalReached()
+    {
+        OnGoalGoaled?.Invoke();
+    }
+
+    public void ByeByeState()
+    {
+        OnByeBye?.Invoke();
     }
 
     public void TakeDamage(int amount)

@@ -2,27 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUDKirby : MonoBehaviour
 {
     [SerializeField] Image ouch_image;
     [SerializeField] Image miss_image;
-    [SerializeField] float image_time = 1.5f;
+    [SerializeField] Image goal_image;
+    [SerializeField] Image byebye_image;
 
     [SerializeField] Animator animate;
+
 
     /** ---[HP]----------------------------------- */
 
     [Header("HP - HUD")]
-    [SerializeField] Image lifePoint_1;
-    [SerializeField] Image lifePoint_2;
-    [SerializeField] Image lifePoint_3;
-    [SerializeField] Image lifePoint_4;
-    [SerializeField] Image lifePoint_5;
-    [SerializeField] Image lifePoint_6;
-
     [SerializeField] Image[] lifePoints; /** array de lifePoints*/
+
+    /** -- fadein-fadeout ------------------------ */
+
+    [Header("FADE")]
+    [SerializeField] Image fade_image;
+    [SerializeField] float fadeDuration = 0.25f;
+
+    /** ------------------------------------------ */
+
+    float normal_image_time = 1.5f;
+    float super_image_time = 10.0f;
 
     float timer = 0f;
     bool mostrar = false;
@@ -34,16 +41,20 @@ public class HUDKirby : MonoBehaviour
 
         ouch_image.enabled = false;
         miss_image.enabled = false;
+        goal_image.enabled = false;
+        byebye_image.enabled = false;
 
         /** subscribirse al evento */
         Kirby.instance.OnDamageTaken += MostrarOuch;
         Kirby.instance.OnDeadStart += MostrarGameOver;
+        Kirby.instance.OnGoalGoaled += MostrarGoal;
+        Kirby.instance.OnByeBye += MostrarByeBye;
     }
 
     void MostrarOuch()
     {
         mostrar = true;
-        timer = image_time;
+        timer = normal_image_time;
         ouch_image.enabled = true;
         animate.enabled = true;
     }
@@ -51,9 +62,23 @@ public class HUDKirby : MonoBehaviour
     void MostrarGameOver()
     {
         mostrar = true;
-        timer = 10f;
+        timer = super_image_time;
         miss_image.enabled = true;
         animate.enabled = true;
+    }
+
+    void MostrarGoal()
+    {
+        mostrar = true;
+        timer = super_image_time;
+        goal_image.enabled = true;
+    }
+
+    void MostrarByeBye()
+    {
+        mostrar = true;
+        timer = normal_image_time;
+        byebye_image.enabled = true;
     }
 
     // Update is called once per frame
@@ -69,6 +94,8 @@ public class HUDKirby : MonoBehaviour
                 mostrar = false;
                 ouch_image.enabled = false;
                 miss_image.enabled = false;
+                goal_image.enabled = false;
+                byebye_image.enabled = false;
             }
         }
 
@@ -82,6 +109,38 @@ public class HUDKirby : MonoBehaviour
             //i-> 0 lifePoints[0] (el primer punto de vida) tiene enabled = Kirby.instance.HP > 0;
             //Es decir, si tiene 0 de vida, está desactivado porque  Kirby.instance.HP > 0--> False , en caso contrario 
             lifePoints[i].enabled = Kirby.instance.HP > i;
+        }
+    }
+
+    /** CORRUTINAS DE FADE */
+
+    /**FADE OUT */
+    public IEnumerator FadeOut()
+    {
+        float time = 0f;
+        Color color = fade_image.color;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            color.a = time / fadeDuration;
+            fade_image.color = color;
+            yield return null;
+        }
+    }
+
+    /**FADE IN */
+    public IEnumerator FadeIn()
+    {
+        float time = 0f;
+        Color color = fade_image.color;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            color.a = 1 - (time / fadeDuration);
+            fade_image.color = color;
+            yield return null;
         }
     }
 }
