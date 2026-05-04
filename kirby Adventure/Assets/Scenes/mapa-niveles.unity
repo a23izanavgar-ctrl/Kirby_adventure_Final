@@ -2191,26 +2191,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ouch_image: {fileID: 569948960}
-<<<<<<< HEAD
-  miss_image: {fileID: 39537565}
-  goal_image: {fileID: 189333644}
-  byebye_image: {fileID: 533783927}
-  animate: {fileID: 1203763073}
-  lifePoints:
-  - {fileID: 2044387405}
-  - {fileID: 313531083}
-  - {fileID: 107353860}
-  - {fileID: 1618602676}
-  - {fileID: 797479215}
-  - {fileID: 1354276698}
-  fade_image: {fileID: 784484139}
-  fadeDuration: 0.25
-=======
   miss_image: {fileID: 0}
   image_time: 0.5
   anim: {fileID: 0}
   lifePoints: []
->>>>>>> 6365268f94123e9d0fe2793a401b6814e65b6591
 --- !u!1 &832354980
 GameObject:
   m_ObjectHideFlags: 0
