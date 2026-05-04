@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: a667e450b64b7cd41958963138f6a97c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_0
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2920
+        width: 48
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5038472, y: 0.5038472}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7dbddd7a77c6b43bf2ad2c646ca1bf
+      internalID: 1600353080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2919
+        width: 48
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88593cecf6dd2af47a616b1cb1debc64
+      internalID: 260808407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 2920
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09acfb234d4f0084fb2ecc27c813b266
+      internalID: 711505283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2828
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbb08c8ba3e0f64dbbee10ab3443fea
+      internalID: 218758658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2828
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17180d952d1abd4585745150e05c3d0
+      internalID: 1675284725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 2828
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153bd030c58a7a945ac2efd734a0633a
+      internalID: -157430645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_6
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2728
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f567441f02cfc7b43816a73a5a0bbffb
+      internalID: 764602977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2728
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c52558a038cd9341ba0987e161dc45b
+      internalID: -269402922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_8
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2636
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a2ef5f52d2bfb4ebce6591b32bcc74
+      internalID: 1998102401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_9
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2636
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d761f71dcdb654db9247a64c98077a
+      internalID: -2087973221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_10
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2794
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7957cce6ee610464fb9307ffb84e2c47
+      internalID: 493208493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_11
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2794
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c1eaf34b8a58941a622c04dcfa7d94
+      internalID: -1439377942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_12
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2774
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1d8a2a34ffa0b4b9269fddd7927bcd
+      internalID: 1599860828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_13
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2774
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b3be9e714988342995ce652f236898
+      internalID: -982536973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_14
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2754
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5636e3bb484875c4599c9f3647b4aca2
+      internalID: -247556080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_15
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2725
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6277e95b4e387b94dafa0e9c632a00ac
+      internalID: 710570197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_16
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2725
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50d517cab09cd84d814d0f085c2f502
+      internalID: -150764369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_17
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 2725
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97c58021b592ef419f31801617dfc21
+      internalID: 1335411464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_18
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2725
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db81954f9b9315944815d0017c6e05a8
+      internalID: 1017696659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_19
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2705
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a5df9cee2095f4d8e56c5d73d58fba
+      internalID: -1020421461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_20
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2705
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cada093f86a03314c91d447b45bdbd98
+      internalID: 709406508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 2705
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9102645d7793916488a457647af3b380
+      internalID: -1304785603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_22
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2705
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f1d07391ceac34bb47fdf02e4e7aff
+      internalID: -1705368629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_23
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2685
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f84f822836b65844a12f7cf2169bd5a
+      internalID: 1739761797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_24
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2685
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b607d5f67171c1f46b7b237397d7f100
+      internalID: 338832687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_25
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 2685
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c671e4263d2c97d4b8fd4bdda175e423
+      internalID: 1924182226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_26
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2685
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168af004b6cb0004b89d86a706676081
+      internalID: -38177311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_27
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2649
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c28562b91dbd404297e980ec1cedd58
+      internalID: 1709482435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_28
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 3012
+        width: 271
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348d69510429c7342a1d617314b987b8
+      internalID: 1341908804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_0: 1600353080
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_1: 260808407
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_10: 493208493
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_11: -1439377942
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_12: 1599860828
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_13: -982536973
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_14: -247556080
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_15: 710570197
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_16: -150764369
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_17: 1335411464
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_18: 1017696659
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_19: -1020421461
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_2: 711505283
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_20: 709406508
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_21: -1304785603
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_22: -1705368629
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_23: 1739761797
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_24: 338832687
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_25: 1924182226
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_26: -38177311
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_27: 1709482435
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_28: 1341908804
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_3: 218758658
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_4: 1675284725
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_5: -157430645
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_6: 764602977
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_7: -269402922
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_8: 1998102401
+      NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_9: -2087973221
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

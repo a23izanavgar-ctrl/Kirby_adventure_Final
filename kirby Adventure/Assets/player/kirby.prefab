@@ -40,7 +40,6 @@ Transform:
   - {fileID: 5802359900782939771}
   - {fileID: 1903974891835347888}
   - {fileID: 6183444729316201333}
-  - {fileID: 7292568634284237959}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6569214564369910823
@@ -115,8 +114,6 @@ MonoBehaviour:
   floatTimer: 0
   HP: 6
   RangoAbsoreber: {fileID: 6442623238846032790}
-  estrella: {fileID: 1679750016011777474, guid: 7cf447e942c873f4fbba62c10079de32, type: 3}
-  velocidadEstrella: 10
 --- !u!50 &1918346586333759246
 Rigidbody2D:
   serializedVersion: 4
@@ -390,7 +387,7 @@ Transform:
   m_GameObject: {fileID: 4302931229899399273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5820001, y: 1.4330001, z: -3.4392219}
+  m_LocalPosition: {x: 0.6300001, y: 0.27999997, z: -3.4392219}
   m_LocalScale: {x: 0.066668, y: 0.066667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -423,10 +420,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.00090826524
+    y: 0.0019267823
+    width: 1.3297004
+    height: 0.7398844
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -602,37 +599,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &5097473786325246360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7292568634284237959}
-  m_Layer: 0
-  m_Name: PuntoDisparoEstrella
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7292568634284237959
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097473786325246360}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.134, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4029728797095949296}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6158274746254124105
 GameObject:
   m_ObjectHideFlags: 0

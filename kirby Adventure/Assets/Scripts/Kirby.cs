@@ -1,14 +1,29 @@
-ï»¿using System;
+using JetBrains.Annotations;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Kirby : MonoBehaviour
 {
-    // =========================
     // SINGLETON
-    // =========================
     private static Kirby kirby;
-    public static Kirby instance => kirby;
+    public static Kirby instance
+    {
+        get { return RequestKirby(); }
+    }
+
+    private static Kirby RequestKirby()
+    {
+        if (!kirby)
+        {
+            kirby = FindObjectOfType<Kirby>();
+        }
+        return kirby;
+    }
 
     void Awake()
     {
@@ -22,9 +37,7 @@ public class Kirby : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // =========================
-    // INPUT
-    // =========================
+    /** INPUT **/
     [SerializeField] InputActionAsset actions;
 
     InputAction move_action;
@@ -32,56 +45,46 @@ public class Kirby : MonoBehaviour
     InputAction flotar_action;
     InputAction Absorber_action;
 
-    // =========================
-    // MOVIMIENTO
-    // =========================
+    float timeFalling = 0;
+
+    /** MOVIMIENTO **/
     [SerializeField] float speed;
     [SerializeField] float jumpImpulse;
     [SerializeField] float flotarImpulse;
     [SerializeField] float maxFloatTime = 3f;
-
-    float floatTimer;
-    float timeFalling;
+    [SerializeField] float floatTimer = 0f;
 
     Rigidbody2D rgb;
     Animator ator;
 
-    bool isGrounded;
+    [SerializeField]
+    public int HP = 0;
 
-    // =========================
-    // VIDA
-    // =========================
-    public int HP = 3;
+    public event System.Action OnDamageTaken;
+    public event System.Action OnDeadStart;
+    public event System.Action OnGoalGoaled;
+    public event System.Action OnByeBye;
 
-    public event Action OnDamageTaken;
-    public event Action OnDeadStart;
-    public event Action OnGoalGoaled;
-    public event Action OnByeBye;
 
-    // =========================
-    // ABSORCIÃ“N
-    // =========================
-    [SerializeField] GameObject RangoAbsoreber;
-    bool haAbsorbido;
+    [SerializeField]
+    GameObject RangoAbsoreber;
 
-    // =========================
-    // ESTRELLA
-    // =========================
-    [SerializeField] GameObject estrella;
-    [SerializeField] float velocidadEstrella = 10f;
+    [SerializeField] string map_gameover;
+    bool gameOverLoaded = false;
 
-    // =========================
-    // ESTADOS
-    // =========================
-    enum MovementState { Walking, Jumping, Falling, Floating }
-    enum AbilityState { Idle, Absorbing, HasPower }
+    enum KIRBY_STATES
+    {
+        WALKING,
+        JUMPING,
+        FALLING,
+        FLOTAR,
+        MUERTO,
+        ABSORBER,
 
-    MovementState moveState;
-    AbilityState abilityState;
+    };
 
-    // =========================
-    // START
-    // =========================
+    KIRBY_STATES currentState;
+
     void Start()
     {
         actions.Enable();
@@ -91,95 +94,67 @@ public class Kirby : MonoBehaviour
         flotar_action = actions.FindActionMap("Movement").FindAction("Flotar");
         Absorber_action = actions.FindActionMap("Movement").FindAction("Ability");
 
+
         rgb = GetComponent<Rigidbody2D>();
         ator = GetComponent<Animator>();
 
-        moveState = MovementState.Walking;
-        abilityState = AbilityState.Idle;
+        currentState = KIRBY_STATES.WALKING;
     }
 
     void Update()
     {
-        UpdateMovement();
-        UpdateAbility();
-        UpdateAnimator();
-    }
-
-    void FixedUpdate()
-    {
-        Moverse();
-    }
-
-    // =========================
-    // MOVIMIENTO
-    // =========================
-    void UpdateMovement()
-    {
-        switch (moveState)
+        switch (currentState)
         {
-            case MovementState.Walking:
+            case KIRBY_STATES.WALKING:
                 UpdateWalking_state();
-                if (!isGrounded) moveState = MovementState.Falling;
                 break;
 
-            case MovementState.Jumping:
-                if (rgb.velocity.y < 0)
-                {
-                    moveState = MovementState.Falling;
-                    ator.SetTrigger("Voltereta");
-                }
+            case KIRBY_STATES.JUMPING:
+                UpdateJumping_state();
+                break;
+            case KIRBY_STATES.FALLING:
+                Update_Falling_State();
                 break;
 
-            case MovementState.Falling:
-                if (isGrounded) moveState = MovementState.Walking;
-                else if (flotar_action.IsPressed()) moveState = MovementState.Floating;
-                timeFalling += Time.deltaTime;
-                break;
-
-            case MovementState.Floating:
+            case KIRBY_STATES.FLOTAR:
                 UpdateFlotar_State();
                 break;
-        }
-    }
+            case KIRBY_STATES.MUERTO:
+                Update_Muerto_state();
+                break;
+            case KIRBY_STATES.ABSORBER:
+                Update_Absorber_State();
+                break;
 
-    void Moverse()
-    {
-        float dir = move_action.ReadValue<float>();
-        rgb.velocity = new Vector2(dir * speed, rgb.velocity.y);
 
-        if (dir != 0)
-            transform.localScale = new Vector3(Mathf.Sign(dir), 1, 1);
-    }
 
-    void UpdateWalking_state()
-    {
-        if (jump_action.WasPressedThisFrame())
-        {
-            ResetTriggers();
-            ator.SetTrigger("HasJumped");
-
-            moveState = MovementState.Jumping;
-            rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
         }
 
-        if (flotar_action.WasPressedThisFrame())
-        {
-            ResetTriggers();
-            ator.SetTrigger("HasFloated");
 
-            moveState = MovementState.Floating;
-        }
-
-        if (Absorber_action.WasPressedThisFrame())
-        {
-            abilityState = AbilityState.Absorbing;
-        }
     }
 
     void UpdateFlotar_State()
     {
-        isGrounded = false;
+        // Mantener flotación mientras se mantenga el botón
+        if (flotar_action.IsPressed())
+        {
+            // OPCIÓN A: tipo Kirby (caída lenta)
+            rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
+            if (rgb.velocity.y > 0)
+            {
+                ator.SetFloat("SpeedYflotar", 1);
+            }
 
+            // OPCIÓN B: más tipo Flappy (impulsos)
+            // rgb.AddForce(Vector2.up * flotarImpulse, ForceMode2D.Force); 
+        }
+        else
+        {
+            // Si suelta el botón, vuelve a caer
+            currentState = KIRBY_STATES.FALLING;
+            ator.SetTrigger("Dejaflotar");
+
+        }
         if (flotar_action.IsPressed() && floatTimer < maxFloatTime)
         {
             floatTimer += Time.deltaTime;
@@ -187,112 +162,138 @@ public class Kirby : MonoBehaviour
         }
         else
         {
-            ResetTriggers();
-            ator.SetTrigger("Dejaflotar");
-            moveState = MovementState.Falling;
+            currentState = KIRBY_STATES.FALLING;
         }
     }
 
-    // =========================
-    // ABILITIES
-    // =========================
-    void UpdateAbility()
+
+    void UpdateWalking_state()
     {
-        switch (abilityState)
+        if (jump_action.WasPressedThisFrame())
         {
-            case AbilityState.Idle:
-                if (Absorber_action.WasPressedThisFrame())
-                    abilityState = AbilityState.Absorbing;
-                break;
-
-            case AbilityState.Absorbing:
-                if (Absorber_action.IsPressed())
-                    RangoAbsoreber.SetActive(true);
-                else
-                {
-                    RangoAbsoreber.SetActive(false);
-                    abilityState = AbilityState.Idle;
-                }
-                break;
-
-            case AbilityState.HasPower:
-                if (haAbsorbido && Absorber_action.WasPressedThisFrame())
-                {
-                    DispararEstrella();
-                    haAbsorbido = false;
-                    abilityState = AbilityState.Idle;
-                }
-                break;
+            currentState = KIRBY_STATES.JUMPING;
+            rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+            ator.SetTrigger("HasJumped");
+        }
+        if (flotar_action.WasPressedThisFrame())
+        {
+            currentState = KIRBY_STATES.FLOTAR;
+            ator.SetTrigger("HasFloated");
+        }
+        if (Absorber_action.WasPressedThisFrame())
+        {
+            currentState = KIRBY_STATES.ABSORBER;
+            // falta poner animacion
         }
     }
 
-    // =========================
-    // VIDA
-    // =========================
+    void UpdateJumping_state()
+    {
+        if (rgb.velocity.y < 0)
+        {
+            ator.SetTrigger("Voltereta");
+            currentState = KIRBY_STATES.FALLING;
+        }
+
+
+        //Mirar cuando la velocidad en Y empieze a ser negativa para dar la voltereta.
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        currentState = KIRBY_STATES.WALKING;
+        ator.SetBool("IsGrounded", true);
+        timeFalling = 0;
+
+    }
+
+    void FixedUpdate()
+    {
+        Moverse();
+    }
+
+    public void Moverse()
+    {
+        float sign = move_action.ReadValue<float>();
+
+        // Movimiento
+        rgb.velocity = new Vector2(sign * speed, rgb.velocity.y);
+
+        // Animación (CLAVE)
+        ator.SetFloat("SpeedX", Mathf.Abs(sign));
+        if (sign > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (sign < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
+    void Update_Falling_State()
+    {
+
+        if (flotar_action.IsPressed())
+        {
+            currentState = KIRBY_STATES.FLOTAR;
+            return;
+        }
+
+        if (rgb.velocity.y < 0)
+        {
+            ator.SetFloat("SpeedY", -1);
+        }
+
+        timeFalling += Time.deltaTime;
+        ator.SetFloat("TimeFalling", timeFalling);
+
+
+    }
+
+    public void GoalReached()
+    {
+        OnGoalGoaled?.Invoke();
+    }
+
+    public void ByeByeState()
+    {
+        OnByeBye?.Invoke();
+    }
+
     public void TakeDamage(int amount)
     {
         HP -= amount;
-        OnDamageTaken?.Invoke();
+        Debug.Log("HP restante: " + HP);
+
+        OnDamageTaken?.Invoke(); /** notificar al HUD */
 
         if (HP <= 0)
         {
-            OnDeadStart?.Invoke();
-            Destroy(gameObject);
+            gameOverLoaded = true;
+            Update_Muerto_state();
+            SceneManager.LoadScene(map_gameover);
         }
     }
 
-    public void GoalReached() => OnGoalGoaled?.Invoke();
-    public void ByeByeState() => OnByeBye?.Invoke();
-
-    // =========================
-    // ESTRELLA
-    // =========================
-    void DispararEstrella()
+    void Update_Muerto_state()
     {
-        Vector3 offset = new Vector3(transform.localScale.x, 0, 0);
-        GameObject e = Instantiate(estrella, transform.position + offset, Quaternion.identity);
-
-        float dir = transform.localScale.x;
-        e.GetComponent<Rigidbody2D>().velocity = new Vector2(dir * velocidadEstrella, 0);
+        OnDeadStart?.Invoke();
+        currentState = KIRBY_STATES.MUERTO;
+        Destroy(gameObject);
     }
 
-    // =========================
-    // COLLISION
-    // =========================
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Update_Absorber_State()
     {
-        isGrounded = true;
-        floatTimer = 0;
-        timeFalling = 0;
-        moveState = MovementState.Walking;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isGrounded = false;
-    }
-
-    public void OnAbsorbSuccess()
-    {
-        abilityState = AbilityState.HasPower;
-        haAbsorbido = true;
-    }
-    void UpdateAnimator()
-    {
-        ator.SetFloat("SpeedX", Mathf.Abs(move_action.ReadValue<float>()));
-        ator.SetFloat("SpeedY", rgb.velocity.y);
-        ator.SetFloat("TimeFalling", timeFalling);
-        ator.SetBool("IsGrounded", isGrounded);
-    }
-    void ResetTriggers()
-    {
-        ator.ResetTrigger("HasJumped");
-        ator.ResetTrigger("HasFloated");
-        ator.ResetTrigger("Dejaflotar");
-        ator.ResetTrigger("Voltereta");
-    }
-    public bool IsAbsorbing()
-    {
-        return abilityState == AbilityState.Absorbing;
+        if (Absorber_action.IsPressed())
+        {
+            RangoAbsoreber.SetActive(true);
+        }
+        else
+        {
+            RangoAbsoreber.SetActive(false);
+            currentState = KIRBY_STATES.WALKING;
+        }
     }
 }
