@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.HID;
 
 public class PuertaKirby : MonoBehaviour
 {
@@ -21,31 +22,50 @@ public class PuertaKirby : MonoBehaviour
     [SerializeField] bool autoTP = false;
 
     bool KirbyTrigger;
+    bool entrando = false;
+
+    HUDKirby hud;
+    [SerializeField] float tiempo_transicion = 0.8f;
 
     private void Start()
     {
         actions.Enable();
         use_action = actions.FindActionMap("Movement").FindAction("Use");
+
+        hud = FindObjectOfType<HUDKirby>();
     }
 
     private void Update()
     {
-        if (use_action.WasPressedThisFrame() && KirbyTrigger || KirbyTrigger && autoTP)
+        if (!entrando && KirbyTrigger && (use_action.WasPressedThisFrame() || autoTP))
         {
             Debug.Log("Entrando...");
             GameObject kirbyObj = Kirby.instance.gameObject; /** gracias al singleton de kirby*/
 
-            /** teletransportar al kirby (el singleton) */
-            Rigidbody2D rb = kirbyObj.GetComponent<Rigidbody2D>();
-            rb.position = NextDoor.transform.position;
-
-
-            EntraKirbyPorLaPuerta(kirbyObj); /** ajustar camara */
+            entrando = true;
+            StartCoroutine(TransicionPuerta(kirbyObj));
         }
-
-
-        
     }
+
+    /** corrutina del fade */
+    IEnumerator TransicionPuerta(GameObject kirbyObj)
+    {
+        /** fade out */
+        yield return StartCoroutine(hud.FadeOut());
+
+        /** teletransportar al kirby (el singleton) */
+        Rigidbody2D rb = kirbyObj.GetComponent<Rigidbody2D>();
+        rb.position = NextDoor.transform.position;
+
+        EntraKirbyPorLaPuerta(kirbyObj); /** ajustar camara */
+
+        yield return new WaitForSeconds(tiempo_transicion);
+
+        /** fade in */
+        yield return StartCoroutine(hud.FadeIn());
+        entrando = false;
+    }
+
 
     public void EntraKirbyPorLaPuerta(GameObject kirbyObj)
     {

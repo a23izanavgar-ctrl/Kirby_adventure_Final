@@ -18,8 +18,14 @@ public class PuertaFinal : MonoBehaviour
     [SerializeField] InputActionAsset actions;
     InputAction use_action;
 
+    [SerializeField] bool sendGoaledAndNotByeBye = false;
+    [SerializeField] float tiempo_transicion = 0.8f;
+
     bool KirbyTrigger = false;
+    bool entrando = false;
     public static PuertaFinal lastUsedDoor;
+
+    HUDKirby hud;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +34,8 @@ public class PuertaFinal : MonoBehaviour
         use_action = actions.FindActionMap("Movement").FindAction("Use");
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        hud = FindObjectOfType<HUDKirby>();
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -42,20 +50,45 @@ public class PuertaFinal : MonoBehaviour
         cam.maxY = newMaxY;
         cam.minX = newMinX;
         cam.minY = newMinY;
+
+        HUDKirby newHud = FindObjectOfType<HUDKirby>();
+        if (newHud != null)
+        {
+            newHud.StartCoroutine(newHud.FadeIn());
+        }
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (use_action.WasPressedThisFrame() && KirbyTrigger)
+        if (!entrando && use_action.WasPressedThisFrame() && KirbyTrigger)
         {
             Debug.Log(debug);
-
+            entrando = true;
             lastUsedDoor = this;
-            SceneManager.LoadScene(mapa); /** cambiar a la escena de niveles*/
+
+            StartCoroutine(TransicionPuertaFinal());
 
         }
+    }
+
+    IEnumerator TransicionPuertaFinal()
+    {
+        if (sendGoaledAndNotByeBye)
+        {
+            Kirby.instance.GoalReached();
+        }
+        else
+        {
+            Kirby.instance.ByeByeState();
+        }
+
+        /** fade out */
+        yield return new WaitForSeconds(tiempo_transicion);
+        yield return StartCoroutine(hud.FadeOut());
+
+        SceneManager.LoadScene(mapa); /** cambiar a la escena de niveles */
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

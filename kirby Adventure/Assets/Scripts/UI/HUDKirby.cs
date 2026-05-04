@@ -1,86 +1,146 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUDKirby : MonoBehaviour
 {
     [SerializeField] Image ouch_image;
     [SerializeField] Image miss_image;
-    [SerializeField] float image_time = 1.5f;
+    [SerializeField] Image goal_image;
+    [SerializeField] Image byebye_image;
 
-    [SerializeField] Animator anim;
+    [SerializeField] Animator animate;
 
-    [Header("HP")]
-    [SerializeField] Image[] lifePoints;
 
-    float timer;
-    bool showing;
+    /** ---[HP]----------------------------------- */
 
+    [Header("HP - HUD")]
+    [SerializeField] Image[] lifePoints; /** array de lifePoints*/
+
+    /** -- fadein-fadeout ------------------------ */
+
+    [Header("FADE")]
+    [SerializeField] Image fade_image;
+    [SerializeField] float fadeDuration = 0.25f;
+
+    /** ------------------------------------------ */
+
+    float normal_image_time = 1.5f;
+    float super_image_time = 10.0f;
+
+    float timer = 0f;
+    bool mostrar = false;
+
+    // Start is called before the first frame update
     void Start()
     {
-        anim.enabled = false;
+        animate.enabled = false;
+
         ouch_image.enabled = false;
         miss_image.enabled = false;
+        goal_image.enabled = false;
+        byebye_image.enabled = false;
 
-        if (Kirby.instance != null)
-        {
-            Kirby.instance.OnDamageTaken += ShowOuch;
-           
-        }
+        /** subscribirse al evento */
+        Kirby.instance.OnDamageTaken += MostrarOuch;
+        Kirby.instance.OnDeadStart += MostrarGameOver;
+        Kirby.instance.OnGoalGoaled += MostrarGoal;
+        Kirby.instance.OnByeBye += MostrarByeBye;
     }
 
-    void OnDestroy()
+    void MostrarOuch()
     {
-        if (Kirby.instance != null)
-        {
-            Kirby.instance.OnDamageTaken -= ShowOuch;
-            
-        }
-    }
-
-    void ShowOuch()
-    {
-        showing = true;
-        timer = image_time;
-
+        mostrar = true;
+        timer = normal_image_time;
         ouch_image.enabled = true;
-        anim.enabled = true;
+        animate.enabled = true;
     }
 
-    void ShowGameOver()
+    void MostrarGameOver()
     {
-        showing = true;
-        timer = 10f;
-
+        mostrar = true;
+        timer = super_image_time;
         miss_image.enabled = true;
-        anim.enabled = true;
+        animate.enabled = true;
     }
 
+    void MostrarGoal()
+    {
+        mostrar = true;
+        timer = super_image_time;
+        goal_image.enabled = true;
+    }
+
+    void MostrarByeBye()
+    {
+        mostrar = true;
+        timer = normal_image_time;
+        byebye_image.enabled = true;
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        if (showing)
+        if (mostrar)
         {
-            timer -= Time.deltaTime;
+            timer -= Time.deltaTime; /** tiempo - deltaTime */
 
-            if (timer <= 0)
+            if (timer <= 0f)
             {
-                showing = false;
-                anim.enabled = false;
-
+                animate.enabled = false;
+                mostrar = false;
                 ouch_image.enabled = false;
                 miss_image.enabled = false;
+                goal_image.enabled = false;
+                byebye_image.enabled = false;
             }
         }
 
-        UpdateHP();
+        UpdateKirbyLifeState();
     }
 
-    void UpdateHP()
+    void UpdateKirbyLifeState()
     {
-        int hp = Mathf.Max(0, Kirby.instance.HP);
-
         for (int i = 0; i < lifePoints.Length; i++)
         {
-            lifePoints[i].enabled = hp > i;
+            //i-> 0 lifePoints[0] (el primer punto de vida) tiene enabled = Kirby.instance.HP > 0;
+            //Es decir, si tiene 0 de vida, está desactivado porque  Kirby.instance.HP > 0--> False , en caso contrario 
+            lifePoints[i].enabled = Kirby.instance.HP > i;
+        }
+    }
+
+    /** CORRUTINAS DE FADE */
+
+    /**FADE OUT */
+    public IEnumerator FadeOut()
+    {
+        float time = 0f;
+        Color color = fade_image.color;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            color.a = time / fadeDuration;
+            fade_image.color = color;
+            yield return null;
+        }
+    }
+
+    /**FADE IN */
+    public IEnumerator FadeIn()
+    {
+        float time = 0f;
+        Color color = fade_image.color;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            color.a = 1 - (time / fadeDuration);
+            fade_image.color = color;
+            yield return null;
         }
     }
 }

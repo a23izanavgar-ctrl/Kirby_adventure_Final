@@ -526,6 +526,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NES - Kirby's Adventure - Miscellaneous - HUD_18
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 338
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeadb100cd2232545a3d4060c5de61e5
+      internalID: -167947909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -547,6 +568,7 @@ TextureImporter:
       NES - Kirby's Adventure - Miscellaneous - HUD_15: -1446197444
       NES - Kirby's Adventure - Miscellaneous - HUD_16: 1685592108
       NES - Kirby's Adventure - Miscellaneous - HUD_17: -1757498397
+      NES - Kirby's Adventure - Miscellaneous - HUD_18: -167947909
       NES - Kirby's Adventure - Miscellaneous - HUD_2: 875845786
       NES - Kirby's Adventure - Miscellaneous - HUD_3: 530868180
       NES - Kirby's Adventure - Miscellaneous - HUD_4: -2049521898
