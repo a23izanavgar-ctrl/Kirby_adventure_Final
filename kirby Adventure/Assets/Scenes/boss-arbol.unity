@@ -405,7 +405,8 @@ GameObject:
   - component: {fileID: 865676116}
   - component: {fileID: 865676115}
   - component: {fileID: 865676114}
-  - component: {fileID: 865676117}
+  - component: {fileID: 865676118}
+  - component: {fileID: 865676119}
   m_Layer: 0
   m_Name: NES - Kirby's Adventure - Enemies & Bosses - Whispy Woods_3
   m_TagString: Untagged
@@ -421,7 +422,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865676113}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 731a280aa0c26f84e9b343a465b31387, type: 2}
   m_CullingMode: 0
@@ -501,7 +502,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &865676117
+--- !u!114 &865676118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,7 +511,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 865676113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7643219dcf6fcc84c9af1da7a08ecbf4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e40346e5d3f921489d7f3eedbbb453e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  isEnemy: 0
+--- !u!114 &865676119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865676113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5267d46199a616429ad51389da2c60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
@@ -522,6 +537,9 @@ MonoBehaviour:
   timeBetweenAttacks: 3
   minionPrefab: {fileID: 0}
   minionSpawnPoints: []
+  projectileVFX: {fileID: 0}
+  slamVFX: {fileID: 0}
+  animator: {fileID: 0}
   enragedThresholdPercent: 30
   enragedAttackMultiplier: 0.6
 --- !u!1 &1308881073
