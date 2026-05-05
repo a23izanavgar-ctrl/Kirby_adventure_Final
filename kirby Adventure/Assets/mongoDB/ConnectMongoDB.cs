@@ -11,6 +11,10 @@ public class ConnectMongoDB : MonoBehaviour
 
     public PlayerStats playerData;
     BsonDocument document;
+    private Kirby kirby;
+
+    private int absorbCounter = 0; // Contador de absorciones
+    private int tiempoDeJuego = 0; // Variable para almacenar el tiempo de juego en segundos
 
     void Start()
     {
@@ -39,24 +43,73 @@ public class ConnectMongoDB : MonoBehaviour
         // Suscribirse al evento de daño de Kirby para mantener los datos actualizados durante la partida
         try
         {
+            // Prefer the singleton instance if it exists, otherwise find any Kirby in the scene
             if (Kirby.instance != null)
             {
-                Kirby.instance.OnDamageTaken += OnPlayerDamage;
-                Kirby.instance.OnDeadStart += OnPlayerDeath;
+                kirby = Kirby.instance;
             }
             else
             {
-                Kirby possible = FindObjectOfType<Kirby>();
-                if (possible != null)
-                {
-                    possible.OnDamageTaken += OnPlayerDamage;
-                    possible.OnDeadStart += OnPlayerDeath;
-                }
+                kirby = FindObjectOfType<Kirby>();
+            }
+
+            if (kirby != null)
+            {
+                kirby.OnDamageTaken += OnPlayerDamage;
+                kirby.OnDeadStart += OnPlayerDeath;
             }
         }
         catch (Exception ex)
         {
-            Debug.LogWarning("No se pudo suscribir a los eventos de Kirby: " + ex.Message);
+            Debug.LogError("Error al suscribirse a eventos de Kirby: " + ex.Message);
+        }
+    }
+
+    void Update()
+    {
+        // Incrementar el tiempo de juego
+        tiempoDeJuego = Mathf.FloorToInt(Time.time);
+
+        // Detectar la tecla Q para incrementar el contador
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            absorbCounter++;
+            Debug.Log("Kirby ha absorbido. Contador: " + absorbCounter);
+            UpdateAbsorbCounterInMongoDB();
+        }
+    }
+
+    private string FormatearTiempoDeJuego(int tiempoEnSegundos)
+    {
+        if (tiempoEnSegundos < 60)
+        {
+            return $"{tiempoEnSegundos} segundos";
+        }
+        else
+        {
+            int minutos = tiempoEnSegundos / 60;
+            int segundos = tiempoEnSegundos % 60;
+            return segundos > 0 ? $"{minutos} minutos y {segundos} segundos" : $"{minutos} minutos";
+        }
+    }
+
+    private void UpdateAbsorbCounterInMongoDB()
+    {
+        try
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("playerId", playerData.playerId);
+            var update = Builders<BsonDocument>.Update
+                .Set("absorbCounter", absorbCounter)
+                .Set("vida", playerData.vida)
+                .Set("tiempoDeJuego", FormatearTiempoDeJuego(tiempoDeJuego)); // Guardar tiempo formateado en MongoDB
+
+            usersCollection.UpdateOne(filter, update, new UpdateOptions { IsUpsert = true });
+
+            Debug.Log($"Datos actualizados en MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Error al actualizar los datos en MongoDB: " + e.Message);
         }
     }
 
@@ -64,6 +117,7 @@ public class ConnectMongoDB : MonoBehaviour
     public class PlayerStats
     {
         public int vida = 0;
+        public string playerId = Guid.NewGuid().ToString();
         public string sessionTimestamp = DateTime.UtcNow.ToString("o");
 
         public BsonDocument ToBson()
@@ -83,7 +137,7 @@ public class ConnectMongoDB : MonoBehaviour
 
         if (Kirby.instance != null)
         {
-            playerData.vida = Kirby.instance.HP;
+            playerData.vida = Mathf.Max(0, Kirby.instance.HP); // Asegurar que la vida no sea negativa
             Debug.Log("PlayerStats actualizados: vida=" + playerData.vida);
         }
     }
@@ -111,16 +165,20 @@ public class ConnectMongoDB : MonoBehaviour
         // Actualizar playerData.vida con el valor actual de Kirby.HP antes de enviar los datos
         if (Kirby.instance != null)
         {
-            playerData.vida = Kirby.instance.HP;
-            Debug.Log("Actualizando playerData.vida con el valor actual de Kirby.HP: " + playerData.vida);
+            playerData.vida = Mathf.Max(0, Kirby.instance.HP); // Asegurar que la vida no sea negativa
         }
-
-        document = playerData.ToBson();
 
         try
         {
-            usersCollection.InsertOne(document);
-            Debug.Log("¡Datos enviados a MongoDB Atlas!");
+            var filter = Builders<BsonDocument>.Filter.Eq("playerId", playerData.playerId);
+            var update = Builders<BsonDocument>.Update
+                .Set("vida", playerData.vida)
+                .Set("absorbCounter", absorbCounter)
+                .Set("tiempoDeJuego", FormatearTiempoDeJuego(tiempoDeJuego));
+
+            usersCollection.UpdateOne(filter, update, new UpdateOptions { IsUpsert = true });
+
+            Debug.Log($"Datos enviados a MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}");
         }
         catch (System.Exception e)
         {

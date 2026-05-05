@@ -44,6 +44,7 @@ public class Kirby : MonoBehaviour
     InputAction jump_action;
     InputAction flotar_action;
     InputAction Absorber_action;
+    InputAction Expulsar_action;
 
     float timeFalling = 0;
 
@@ -74,6 +75,12 @@ public class Kirby : MonoBehaviour
     [SerializeField] string map_gameover;
     bool gameOverLoaded = false;
 
+    [Header("ESTRELLITA")]
+    [Space(10)]
+    [SerializeField] GameObject estrellaPrefab;
+    [SerializeField] Transform puntoDisparo;
+    [SerializeField] float fuerzaEstrella = 10f;
+
     enum KIRBY_STATES
     {
         WALKING,
@@ -95,6 +102,7 @@ public class Kirby : MonoBehaviour
         jump_action = actions.FindActionMap("Movement").FindAction("Jump");
         flotar_action = actions.FindActionMap("Movement").FindAction("Flotar");
         Absorber_action = actions.FindActionMap("Movement").FindAction("Ability");
+        Expulsar_action = actions.FindActionMap("Movement").FindAction("Star");
 
 
         rgb = GetComponent<Rigidbody2D>();
@@ -110,14 +118,12 @@ public class Kirby : MonoBehaviour
             case KIRBY_STATES.WALKING:
                 UpdateWalking_state();
                 break;
-
             case KIRBY_STATES.JUMPING:
                 UpdateJumping_state();
                 break;
             case KIRBY_STATES.FALLING:
                 Update_Falling_State();
                 break;
-
             case KIRBY_STATES.FLOTAR:
                 UpdateFlotar_State();
                 break;
@@ -164,8 +170,11 @@ public class Kirby : MonoBehaviour
         if (jump_action.WasPressedThisFrame())
         {
             currentState = KIRBY_STATES.JUMPING;
+
             rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+            ator.SetBool("Gordo", hasEnemyInside);
             ator.SetTrigger("HasJumped");
+
             ator.SetBool("IsGrounded", false);
         }
         if (flotar_action.WasPressedThisFrame())
@@ -178,16 +187,17 @@ public class Kirby : MonoBehaviour
             currentState = KIRBY_STATES.ABSORBER;
             isAbsorbing = true;
 
-            ator.SetTrigger("Absorber"); 
-        }
-        if (hasEnemyInside && Absorber_action.WasPressedThisFrame())
+            ator.SetBool("IsAbsorbing", true);
+        }      
+        if (Expulsar_action.WasPressedThisFrame() && hasEnemyInside)
         {
             ator.SetTrigger("ExplusaEstrella");
 
             hasEnemyInside = false;
-
             ator.SetBool("Gordo", false);
+            ExpulsarEstrella();
         }
+
     }
 
     void UpdateJumping_state()
@@ -197,9 +207,6 @@ public class Kirby : MonoBehaviour
             ator.SetTrigger("Voltereta");
             currentState = KIRBY_STATES.FALLING;
         }
-
-
-        //Mirar cuando la velocidad en Y empieze a ser negativa para dar la voltereta.
     }
 
 
@@ -233,12 +240,12 @@ public class Kirby : MonoBehaviour
         if (hasEnemyInside)
         {
             ator.SetFloat("SpeedGordoX", Mathf.Abs(sign));
-            ator.SetFloat("SpeedX", 0); // 🔥 IMPORTANTE
+            ator.SetFloat("SpeedX", 0); 
         }
         else
         {
             ator.SetFloat("SpeedX", Mathf.Abs(sign));
-            ator.SetFloat("SpeedGordoX", 0); // 🔥 IMPORTANTE
+            ator.SetFloat("SpeedGordoX", 0); // IMPORTANTE
         }
     }
 
@@ -296,7 +303,7 @@ public class Kirby : MonoBehaviour
         {
             RangoAbsoreber.SetActive(true);
 
-            // ❗ NO repetir animación constantemente
+            // NO repetir animación constantemente
             // solo mantener activa
         }
 
@@ -305,6 +312,8 @@ public class Kirby : MonoBehaviour
         {
             RangoAbsoreber.SetActive(false);
             isAbsorbing = false;
+
+            ator.SetBool("IsAbsorbing", false);
 
             currentState = KIRBY_STATES.WALKING;
 
@@ -316,6 +325,8 @@ public class Kirby : MonoBehaviour
         {
             RangoAbsoreber.SetActive(false);
             isAbsorbing = false;
+
+            ator.SetBool("IsAbsorbing", false);
 
             currentState = KIRBY_STATES.WALKING;
         }
@@ -330,4 +341,25 @@ public class Kirby : MonoBehaviour
 
         ator.SetBool("Gordo", true); 
     }
+
+
+
+    void ExpulsarEstrella()
+    {
+        if (estrellaPrefab == null || puntoDisparo == null) return;
+
+        GameObject estrella = Instantiate(estrellaPrefab, puntoDisparo.position, Quaternion.identity);
+
+        Rigidbody2D rb = estrella.GetComponent<Rigidbody2D>();
+
+        float direccion = transform.localScale.x;
+
+        rb.AddForce(new Vector2(direccion * fuerzaEstrella, 0), ForceMode2D.Impulse);
+
+
+    }
+
+
+
+
 }

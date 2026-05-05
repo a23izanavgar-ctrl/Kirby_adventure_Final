@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Star",
+                    "type": "Button",
+                    "id": "f43ffb89-73c4-4156-865f-9d8c065921c1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -192,6 +201,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Ability",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f99251e-f256-48a1-837f-9c24b75f6ff3",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Star",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

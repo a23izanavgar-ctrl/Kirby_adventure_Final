@@ -40,6 +40,7 @@ Transform:
   - {fileID: 5802359900782939771}
   - {fileID: 1903974891835347888}
   - {fileID: 6183444729316201333}
+  - {fileID: 614004691042704868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6569214564369910823
@@ -114,6 +115,10 @@ MonoBehaviour:
   floatTimer: 0
   HP: 6
   RangoAbsoreber: {fileID: 6442623238846032790}
+  map_gameover: Mapa-Muerte
+  estrellaPrefab: {fileID: 1679750016011777474, guid: 7cf447e942c873f4fbba62c10079de32, type: 3}
+  puntoDisparo: {fileID: 614004691042704868}
+  fuerzaEstrella: 10
 --- !u!50 &1918346586333759246
 Rigidbody2D:
   serializedVersion: 4
@@ -206,9 +211,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 691546328125608575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dea1661bc9b75d41b5df856132e6e23, type: 3}
+  m_Script: {fileID: 11500000, guid: 79d147903d4813649974418ea06a9f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData:
+    vida: 0
+    playerId: de43374e-d8dc-45b8-bc8b-c187a6b8e10e
+    sessionTimestamp: 2026-05-05T13:59:28.5692561Z
 --- !u!1 &2060582085744229901
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +316,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4029728797095949296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3578511860641992000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 614004691042704868}
+  m_Layer: 0
+  m_Name: PuntoDisparoEstrella
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &614004691042704868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578511860641992000}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4029728797095949296}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4068968879179029303
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 4302931229899399273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6300001, y: 0.27999997, z: -3.4392219}
+  m_LocalPosition: {x: 1.5820001, y: 1.4330001, z: -3.4392219}
   m_LocalScale: {x: 0.066668, y: 0.066667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,10 +460,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00090826524
-    y: 0.0019267823
-    width: 1.3297004
-    height: 0.7398844
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

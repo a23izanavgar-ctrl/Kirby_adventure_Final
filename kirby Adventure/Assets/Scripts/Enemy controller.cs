@@ -12,15 +12,34 @@ public class Enemycontroller : MonoBehaviour
 
     [SerializeField]
     protected int damage = 0;
+    [SerializeField]
+    protected int Puntuacion = 0;
 
     public int GetHealth ()
     {
         return health;
     }
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
 
     public float GetSpeed()
     {
         return speed;
+    }
+    
+    public int GetPoints()
+    {
+        return Puntuacion;
+    }
+
+    public void die()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

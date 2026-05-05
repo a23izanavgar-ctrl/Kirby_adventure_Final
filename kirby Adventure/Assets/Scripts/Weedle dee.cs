@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -30,20 +31,28 @@ public class WeedleDee : Enemycontroller
         rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("COLISIÓN CON: " + collision.gameObject.name);
 
         if (collision.gameObject.CompareTag("Player"))
         {
             Kirby.instance.TakeDamage(damage);
-        }
-        Debug.Log("COLISIÓN CON: " + collision.gameObject.name);
 
-        Flip();
+            health = 0;
+
+            die();
+        }
+        else
+        {
+            Flip();
+        }
     }
 
 
 
-    
+
+
+
 }
 
