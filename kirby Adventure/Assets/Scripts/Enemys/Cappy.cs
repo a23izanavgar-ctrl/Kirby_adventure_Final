@@ -1,10 +1,11 @@
+using MongoDB.Driver;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Cappy : Enemycontroller
 {
-
+    Animator ator;
 
     private Rigidbody2D rb;
 
@@ -19,6 +20,7 @@ public class Cappy : Enemycontroller
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        ator = GetComponent<Animator>();
     }
 
     void Update()
@@ -45,4 +47,29 @@ public class Cappy : Enemycontroller
         yield return new WaitForSeconds(jumpCooldown);
         canJump = true;
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("COLISIÓN CON: " + collision.gameObject.name);
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            
+            Kirby.instance.TakeDamage(damage);
+
+            health -= 1;
+
+            ator.SetBool("Hit", true);
+            die();
+        }
+
+        if (collision.gameObject.CompareTag("Estrella"))
+        {
+            Debug.Log("Estrlla");
+            ator.SetBool("Hit", true);
+            die();
+        }
+    }
+
+    
 }

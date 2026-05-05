@@ -17,7 +17,7 @@ public class Estrella : MonoBehaviour
 
             if (enemy != null)
             {
-                enemy.setHealth(0);
+                enemy.Damaged(1);
                 enemy.die();
             }
 

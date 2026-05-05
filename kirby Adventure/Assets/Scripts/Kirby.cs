@@ -356,10 +356,5 @@ public class Kirby : MonoBehaviour
 
         rb.AddForce(new Vector2(direccion * fuerzaEstrella, 0), ForceMode2D.Impulse);
 
-
     }
-
-
-
-
 }

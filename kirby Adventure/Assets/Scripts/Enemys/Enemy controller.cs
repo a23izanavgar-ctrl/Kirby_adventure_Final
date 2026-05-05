@@ -34,6 +34,11 @@ public class Enemycontroller : MonoBehaviour
         return Puntuacion;
     }
 
+    public void Damaged(int Damage)
+    {
+        health -= damage;
+    }
+
     public void die()
     {
         if (health <= 0)

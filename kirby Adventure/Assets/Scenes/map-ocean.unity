@@ -14926,6 +14926,7 @@ MonoBehaviour:
   newMaxY: -3.4
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   autoTP: 0
+  tiempo_transicion: 0.8
 --- !u!1 &408546968
 GameObject:
   m_ObjectHideFlags: 0
@@ -18403,6 +18404,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 460306920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &502976618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1893506704}
+    m_Modifications:
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.003758024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535392035001528348, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: m_Name
+      value: Spawner enemigos
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681117021373417747, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 6370998242655494589, guid: f367ead4936a31d47b90bffab378cd2b, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+--- !u!4 &502976619 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3018258065547198183, guid: a5a800dc64a2b514ab7dc0618217c369, type: 3}
+  m_PrefabInstance: {fileID: 502976618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &503561679
 GameObject:
   m_ObjectHideFlags: 0
@@ -34512,6 +34579,7 @@ MonoBehaviour:
   newMaxY: 1.2
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   autoTP: 0
+  tiempo_transicion: 0.8
 --- !u!1 &957497699
 GameObject:
   m_ObjectHideFlags: 0
@@ -59738,6 +59806,7 @@ MonoBehaviour:
   newMaxY: 1
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   autoTP: 0
+  tiempo_transicion: 0.8
 --- !u!1 &1751951517
 GameObject:
   m_ObjectHideFlags: 0
@@ -64798,6 +64867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1376116240}
+  - {fileID: 502976619}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1905228420
@@ -69353,6 +69423,7 @@ MonoBehaviour:
   newMaxY: 1.3
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   sendGoaledAndNotByeBye: 1
+  tiempo_transicion: 0.8
 --- !u!1 &2035670428
 GameObject:
   m_ObjectHideFlags: 0
