@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+ï»¿using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -65,6 +65,8 @@ public class Kirby : MonoBehaviour
     public event System.Action OnGoalGoaled;
     public event System.Action OnByeBye;
 
+    bool isAbsorbing = false;
+    bool hasEnemyInside = false;
 
     [SerializeField]
     GameObject RangoAbsoreber;
@@ -130,42 +132,32 @@ public class Kirby : MonoBehaviour
 
         }
 
+        if (rgb.velocity.y < -0.1f && currentState != KIRBY_STATES.FLOTAR)
+        {
+            ator.SetBool("IsGrounded", false);
+        }
+
 
     }
 
     void UpdateFlotar_State()
     {
-        // Mantener flotación mientras se mantenga el botón
-        if (flotar_action.IsPressed())
-        {
-            // OPCIÓN A: tipo Kirby (caída lenta)
-            rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
-            if (rgb.velocity.y > 0)
-            {
-                ator.SetFloat("SpeedYflotar", 1);
-            }
-
-            // OPCIÓN B: más tipo Flappy (impulsos)
-            // rgb.AddForce(Vector2.up * flotarImpulse, ForceMode2D.Force); 
-        }
-        else
-        {
-            // Si suelta el botón, vuelve a caer
-            currentState = KIRBY_STATES.FALLING;
-            ator.SetTrigger("Dejaflotar");
-
-        }
         if (flotar_action.IsPressed() && floatTimer < maxFloatTime)
         {
             floatTimer += Time.deltaTime;
+
             rgb.velocity = new Vector2(rgb.velocity.x, flotarImpulse);
+
+            ator.SetFloat("SpeedYflotar", 1);
         }
         else
         {
+            ator.SetFloat("SpeedYflotar", 0);
+
             currentState = KIRBY_STATES.FALLING;
+            ator.SetTrigger("Dejaflotar");
         }
     }
-
 
     void UpdateWalking_state()
     {
@@ -174,16 +166,27 @@ public class Kirby : MonoBehaviour
             currentState = KIRBY_STATES.JUMPING;
             rgb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
             ator.SetTrigger("HasJumped");
+            ator.SetBool("IsGrounded", false);
         }
         if (flotar_action.WasPressedThisFrame())
         {
             currentState = KIRBY_STATES.FLOTAR;
             ator.SetTrigger("HasFloated");
         }
-        if (Absorber_action.WasPressedThisFrame())
+        if (Absorber_action.WasPressedThisFrame() && !hasEnemyInside)
         {
             currentState = KIRBY_STATES.ABSORBER;
-            // falta poner animacion
+            isAbsorbing = true;
+
+            ator.SetTrigger("Absorber"); 
+        }
+        if (hasEnemyInside && Absorber_action.WasPressedThisFrame())
+        {
+            ator.SetTrigger("ExplusaEstrella");
+
+            hasEnemyInside = false;
+
+            ator.SetBool("Gordo", false);
         }
     }
 
@@ -202,6 +205,9 @@ public class Kirby : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        floatTimer = 0f;
+        ator.SetFloat("SpeedY", 0);
         currentState = KIRBY_STATES.WALKING;
         ator.SetBool("IsGrounded", true);
         timeFalling = 0;
@@ -217,39 +223,39 @@ public class Kirby : MonoBehaviour
     {
         float sign = move_action.ReadValue<float>();
 
-        // Movimiento
         rgb.velocity = new Vector2(sign * speed, rgb.velocity.y);
 
-        // Animación (CLAVE)
-        ator.SetFloat("SpeedX", Mathf.Abs(sign));
         if (sign > 0)
-        {
             transform.localScale = new Vector3(1, 1, 1);
-        }
         else if (sign < 0)
-        {
             transform.localScale = new Vector3(-1, 1, 1);
+
+        if (hasEnemyInside)
+        {
+            ator.SetFloat("SpeedGordoX", Mathf.Abs(sign));
+            ator.SetFloat("SpeedX", 0); // ðŸ”¥ IMPORTANTE
+        }
+        else
+        {
+            ator.SetFloat("SpeedX", Mathf.Abs(sign));
+            ator.SetFloat("SpeedGordoX", 0); // ðŸ”¥ IMPORTANTE
         }
     }
 
     void Update_Falling_State()
     {
-
         if (flotar_action.IsPressed())
         {
             currentState = KIRBY_STATES.FLOTAR;
+            ator.SetTrigger("HasFloated");
             return;
         }
 
-        if (rgb.velocity.y < 0)
-        {
-            ator.SetFloat("SpeedY", -1);
-        }
+        // Velocidad vertical
+        ator.SetFloat("SpeedY", rgb.velocity.y);
 
         timeFalling += Time.deltaTime;
         ator.SetFloat("TimeFalling", timeFalling);
-
-
     }
 
     public void GoalReached()
@@ -267,7 +273,7 @@ public class Kirby : MonoBehaviour
         HP -= amount;
         Debug.Log("HP restante: " + HP);
 
-        OnDamageTaken?.Invoke(); /** notificar al HUD */
+        OnDamageTaken?.Invoke();
 
         if (HP <= 0)
         {
@@ -286,14 +292,42 @@ public class Kirby : MonoBehaviour
 
     void Update_Absorber_State()
     {
-        if (Absorber_action.IsPressed())
+        if (isAbsorbing)
         {
             RangoAbsoreber.SetActive(true);
+
+            // â— NO repetir animaciÃ³n constantemente
+            // solo mantener activa
         }
-        else
+
+        // Si ya tiene enemigo dentro â†’ salir
+        if (hasEnemyInside)
         {
             RangoAbsoreber.SetActive(false);
+            isAbsorbing = false;
+
+            currentState = KIRBY_STATES.WALKING;
+
+            ator.SetBool("Gordo", true); 
+        }
+
+        // Si suelta botÃ³n sin absorber nada
+        if (!Absorber_action.IsPressed() && !hasEnemyInside)
+        {
+            RangoAbsoreber.SetActive(false);
+            isAbsorbing = false;
+
             currentState = KIRBY_STATES.WALKING;
         }
+    }
+    public void OnEnemyAbsorbed(GameObject enemy)
+    {
+        Destroy(enemy);
+
+        Debug.Log("Enemigo absorbido");
+
+        hasEnemyInside = true;
+
+        ator.SetBool("Gordo", true); 
     }
 }

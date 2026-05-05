@@ -1795,6 +1795,7 @@ MonoBehaviour:
   newMaxY: 1.4
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   sendGoaledAndNotByeBye: 0
+  tiempo_transicion: 0.8
 --- !u!1 &784484137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2098,7 @@ MonoBehaviour:
   - {fileID: 797479215}
   - {fileID: 1354276698}
   fade_image: {fileID: 784484139}
-  fadeDuration: 0.25
+  fadeDuration: 1
 --- !u!1 &832354980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +2951,7 @@ MonoBehaviour:
   newMaxY: 3
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   sendGoaledAndNotByeBye: 0
+  tiempo_transicion: 0.8
 --- !u!1 &1201157075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4328,6 +4330,7 @@ MonoBehaviour:
   newMaxY: 3.7
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   sendGoaledAndNotByeBye: 0
+  tiempo_transicion: 0.8
 --- !u!1 &1710092983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5162,6 +5165,7 @@ MonoBehaviour:
   newMaxY: 2
   actions: {fileID: -944628639613478452, guid: 327b859d04ebdee4bb03267093d216f7, type: 3}
   sendGoaledAndNotByeBye: 0
+  tiempo_transicion: 0.8
 --- !u!4 &1887742028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4029728797095949296, guid: 966dbedc3a6dbc6429b25672f4fd8385, type: 3}
