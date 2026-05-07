@@ -197,8 +197,17 @@ public class HUDKirby : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     public int GetScore()
     {
         return score;
     }
+=======
+    public void VolverAlInicio()
+    {
+        Time.timeScale = 1f;
+        Application.Quit();
+    }
+
+>>>>>>> Izan
 }
