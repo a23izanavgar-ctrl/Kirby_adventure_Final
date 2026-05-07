@@ -11,12 +11,19 @@ public class ConnectMongoDB : MonoBehaviour
 
     public PlayerStats playerData;
     BsonDocument document;
+<<<<<<< HEAD
     private Kirby kirby;
     private HUDKirby hud; // Referencia al HUD
 
     private int absorbCounter = 0; // Contador de absorciones
     private int tiempoDeJuego = 0; // Variable para almacenar el tiempo de juego en segundos
+=======
+>>>>>>> parent of 9605aca (java sql)
 
+    //1. Montar clase serializada de datos analytics a guardar
+    //2. Crear una instancia de esta clase por sesion de partida (pulsar al play)
+    //3. Actualizar las variables de la instancia de sesión durante la partida (        Kirby.instance.OnDamageTaken += MetodoQueACtualizaLaVidaDeKirbyEnJSON);
+    //4. Enviar la estructura de datos a mongo.
     void Start()
     {
         string connectionString = "mongodb+srv://a25albgilher_db_user:y7I3mVdd9FyoMzar@cluster0.xptrflm.mongodb.net/?appName=Cluster0";
@@ -28,40 +35,50 @@ public class ConnectMongoDB : MonoBehaviour
             usersCollection = database.GetCollection<BsonDocument>("a25albgilher_db_user");
 
             Debug.Log("Se ha conectado a la BD");
+
+            // Eliminar el campo histórico "coins" de documentos ya existentes en la colección
+            try
+            {
+                var filter = Builders<BsonDocument>.Filter.Exists("coins");
+                var update = Builders<BsonDocument>.Update.Unset("coins");
+                var result = usersCollection.UpdateMany(filter, update);
+                Debug.Log("Campo 'coins' eliminado de documentos existentes. ModifiedCount=" + result.ModifiedCount);
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogWarning("No se pudo eliminar el campo 'coins' de documentos existentes: " + ex.Message);
+            }
         }
         catch (System.Exception e)
         {
             Debug.LogError("MongoDB Connection Error: " + e.Message);
         }
 
-        // Crear una instancia de la clase por sesión si es necesario
+        // 2. Crear una instancia de la clase por sesión si es necesario
         if (playerData == null)
         {
             Debug.LogWarning("playerData era NULL, se inicializa automáticamente");
             playerData = new PlayerStats();
         }
 
-        // Suscribirse al evento de daño de Kirby para mantener los datos actualizados durante la partida
+        // 3. Suscribirse al evento de daño de Kirby para mantener los datos actualizados durante la partida
+        // Intentamos usar el singleton; si es null buscamos la instancia en la escena.
         try
         {
-            // Prefer the singleton instance if it exists, otherwise find any Kirby in the scene
             if (Kirby.instance != null)
             {
-                kirby = Kirby.instance;
+                Kirby.instance.OnDamageTaken += OnPlayerDamage;
             }
             else
             {
-                kirby = FindObjectOfType<Kirby>();
-            }
-
-            if (kirby != null)
-            {
-                kirby.OnDamageTaken += OnPlayerDamage;
-                kirby.OnDeadStart += OnPlayerDeath;
+                Kirby possible = FindObjectOfType<Kirby>();
+                if (possible != null)
+                    possible.OnDamageTaken += OnPlayerDamage;
             }
         }
         catch (Exception ex)
         {
+<<<<<<< HEAD
             Debug.LogError("Error al suscribirse a eventos de Kirby: " + ex.Message);
         }
 
@@ -115,16 +132,22 @@ public class ConnectMongoDB : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogError("Error al actualizar los datos en MongoDB: " + e.Message);
+=======
+            Debug.LogWarning("No se pudo suscribir a Kirby.OnDamageTaken: " + ex.Message);
+>>>>>>> parent of 9605aca (java sql)
         }
     }
 
+    // 1. Clase serializable con los datos de analytics a guardar
     [Serializable]
     public class PlayerStats
     {
+        // vida actual del jugador (se actualiza con Kirby.HP)
         public int vida = 0;
-        public string playerId = Guid.NewGuid().ToString();
+        // marca temporal de la sesión o del evento
         public string sessionTimestamp = DateTime.UtcNow.ToString("o");
 
+        // Convierte la estructura a BsonDocument para enviar a Mongo
         public BsonDocument ToBson()
         {
             return new BsonDocument
@@ -135,6 +158,7 @@ public class ConnectMongoDB : MonoBehaviour
         }
     }
 
+    // Método llamado cuando Kirby recibe daño
     private void OnPlayerDamage()
     {
         if (playerData == null)
@@ -142,15 +166,9 @@ public class ConnectMongoDB : MonoBehaviour
 
         if (Kirby.instance != null)
         {
-            playerData.vida = Mathf.Max(0, Kirby.instance.HP); // Asegurar que la vida no sea negativa
+            playerData.vida = Kirby.instance.HP;
             Debug.Log("PlayerStats actualizados: vida=" + playerData.vida);
         }
-    }
-
-    private void OnPlayerDeath()
-    {
-        Debug.Log("Kirby ha muerto. Enviando datos a MongoDB...");
-        enviarDatos();
     }
 
     public void enviarDatos()
@@ -167,6 +185,7 @@ public class ConnectMongoDB : MonoBehaviour
             return;
         }
 
+<<<<<<< HEAD
         // Actualizar playerData.vida con el valor actual de Kirby.HP antes de enviar los datos
         if (Kirby.instance != null)
         {
@@ -185,6 +204,14 @@ public class ConnectMongoDB : MonoBehaviour
             usersCollection.UpdateOne(filter, update, new UpdateOptions { IsUpsert = true });
 
             Debug.Log($"Datos enviados a MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}, Puntaje = {hud?.GetScore() ?? 0}");
+=======
+        document = playerData.ToBson();
+
+        try
+        {
+            usersCollection.InsertOne(document);
+            Debug.Log("¡Datos enviados a MongoDB Atlas!");
+>>>>>>> parent of 9605aca (java sql)
         }
         catch (System.Exception e)
         {
@@ -203,18 +230,12 @@ public class ConnectMongoDB : MonoBehaviour
         try
         {
             if (Kirby.instance != null)
-            {
                 Kirby.instance.OnDamageTaken -= OnPlayerDamage;
-                Kirby.instance.OnDeadStart -= OnPlayerDeath;
-            }
             else
             {
                 Kirby possible = FindObjectOfType<Kirby>();
                 if (possible != null)
-                {
                     possible.OnDamageTaken -= OnPlayerDamage;
-                    possible.OnDeadStart -= OnPlayerDeath;
-                }
             }
         }
         catch { }
