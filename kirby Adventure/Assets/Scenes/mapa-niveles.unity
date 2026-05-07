@@ -2311,6 +2311,7 @@ MonoBehaviour:
   - {fileID: 1354276698}
   fade_image: {fileID: 784484139}
   fadeDuration: 1
+<<<<<<< HEAD
   pausePanel: {fileID: 1929122548}
 --- !u!114 &806017523
 MonoBehaviour:
@@ -2324,6 +2325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602811822b150fc40be4b493b87545a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> parent of 8e42de7 (kirby con script sql + ajuste HUD)
 --- !u!1 &832354980
 GameObject:
   m_ObjectHideFlags: 0
