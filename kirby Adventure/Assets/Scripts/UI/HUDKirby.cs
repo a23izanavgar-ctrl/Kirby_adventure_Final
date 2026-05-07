@@ -33,6 +33,11 @@ public class HUDKirby : MonoBehaviour
     [SerializeField] Image fade_image;
     [SerializeField] float fadeDuration = 0.25f;
 
+    [Header("PAUSE")]
+    [SerializeField] GameObject pausePanel;
+
+    bool isPaused = false;
+
     /** ------------------------------------------ */
 
 
@@ -46,6 +51,7 @@ public class HUDKirby : MonoBehaviour
     void Start()
     {
         animate.enabled = false;
+        pausePanel.SetActive(false);
 
         ouch_image.enabled = false;
         miss_image.enabled = false;
@@ -94,6 +100,12 @@ public class HUDKirby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
+
         if (mostrar)
         {
             timer -= Time.deltaTime; /** tiempo - deltaTime */
@@ -108,6 +120,8 @@ public class HUDKirby : MonoBehaviour
                 byebye_image.enabled = false;
             }
         }
+
+        
 
         UpdateKirbyLifeState();
     }
@@ -165,5 +179,21 @@ public class HUDKirby : MonoBehaviour
     void UpdateScoreUI()
     {
         scoreText.text = " " + score;
+    }
+
+    void TogglePause()
+    {
+        isPaused = !isPaused;
+
+        pausePanel.SetActive(isPaused);
+
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 }
