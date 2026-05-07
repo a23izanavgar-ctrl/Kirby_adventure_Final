@@ -196,4 +196,11 @@ public class HUDKirby : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+
+    public void VolverAlInicio()
+    {
+        Time.timeScale = 1f;
+        Application.Quit();
+    }
+
 }
