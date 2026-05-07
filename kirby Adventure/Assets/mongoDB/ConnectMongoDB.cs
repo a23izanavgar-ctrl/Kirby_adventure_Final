@@ -12,6 +12,7 @@ public class ConnectMongoDB : MonoBehaviour
     public PlayerStats playerData;
     BsonDocument document;
     private Kirby kirby;
+    private HUDKirby hud; // Referencia al HUD
 
     private int absorbCounter = 0; // Contador de absorciones
     private int tiempoDeJuego = 0; // Variable para almacenar el tiempo de juego en segundos
@@ -63,6 +64,9 @@ public class ConnectMongoDB : MonoBehaviour
         {
             Debug.LogError("Error al suscribirse a eventos de Kirby: " + ex.Message);
         }
+
+        // Inicializar referencia al HUD
+        hud = FindObjectOfType<HUDKirby>();
     }
 
     void Update()
@@ -101,11 +105,12 @@ public class ConnectMongoDB : MonoBehaviour
             var update = Builders<BsonDocument>.Update
                 .Set("absorbCounter", absorbCounter)
                 .Set("vida", playerData.vida)
-                .Set("tiempoDeJuego", FormatearTiempoDeJuego(tiempoDeJuego)); // Guardar tiempo formateado en MongoDB
+                .Set("tiempoDeJuego", FormatearTiempoDeJuego(tiempoDeJuego)) // Guardar tiempo formateado en MongoDB
+                .Set("score", hud != null ? hud.GetScore() : 0); // Añadir el puntaje al documento
 
             usersCollection.UpdateOne(filter, update, new UpdateOptions { IsUpsert = true });
 
-            Debug.Log($"Datos actualizados en MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}");
+            Debug.Log($"Datos actualizados en MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}, Puntaje = {hud?.GetScore() ?? 0}");
         }
         catch (Exception e)
         {
@@ -165,7 +170,7 @@ public class ConnectMongoDB : MonoBehaviour
         // Actualizar playerData.vida con el valor actual de Kirby.HP antes de enviar los datos
         if (Kirby.instance != null)
         {
-            playerData.vida = Mathf.Max(0, Kirby.instance.HP); // Asegurar que la vida no sea negativa
+            playerData.vida = Mathf.Max(0, Kirby.instance.HP);
         }
 
         try
@@ -174,11 +179,12 @@ public class ConnectMongoDB : MonoBehaviour
             var update = Builders<BsonDocument>.Update
                 .Set("vida", playerData.vida)
                 .Set("absorbCounter", absorbCounter)
-                .Set("tiempoDeJuego", FormatearTiempoDeJuego(tiempoDeJuego));
+                .Set("tiempoDeJuego", FormatearTiempoDeJuego(tiempoDeJuego))
+                .Set("score", hud != null ? hud.GetScore() : 0); // Añadir el puntaje al documento
 
             usersCollection.UpdateOne(filter, update, new UpdateOptions { IsUpsert = true });
 
-            Debug.Log($"Datos enviados a MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}");
+            Debug.Log($"Datos enviados a MongoDB: Vida = {playerData.vida}, Enemigos absorbidos = {absorbCounter}, Tiempo de juego = {FormatearTiempoDeJuego(tiempoDeJuego)}, Puntaje = {hud?.GetScore() ?? 0}");
         }
         catch (System.Exception e)
         {

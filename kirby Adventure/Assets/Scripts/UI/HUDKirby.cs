@@ -20,7 +20,7 @@ public class HUDKirby : MonoBehaviour
     [Header("SCORE")]
     [SerializeField] TMP_Text scoreText;
 
-    int score = 0;
+    public int score = 0;
 
     /** ---[HP]----------------------------------- */
 
@@ -195,5 +195,10 @@ public class HUDKirby : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }
