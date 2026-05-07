@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class HUDKirby : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class HUDKirby : MonoBehaviour
 
     [SerializeField] Animator animate;
 
+    /** ---[SCORE]----------------------------------- */
+
+    [Header("SCORE")]
+    [SerializeField] TMP_Text scoreText;
+
+    int score = 0;
 
     /** ---[HP]----------------------------------- */
 
@@ -26,7 +33,13 @@ public class HUDKirby : MonoBehaviour
     [SerializeField] Image fade_image;
     [SerializeField] float fadeDuration = 0.25f;
 
+    [Header("PAUSE")]
+    [SerializeField] GameObject pausePanel;
+
+    bool isPaused = false;
+
     /** ------------------------------------------ */
+
 
     float normal_image_time = 1.5f;
     float super_image_time = 10.0f;
@@ -38,6 +51,7 @@ public class HUDKirby : MonoBehaviour
     void Start()
     {
         animate.enabled = false;
+        pausePanel.SetActive(false);
 
         ouch_image.enabled = false;
         miss_image.enabled = false;
@@ -49,6 +63,8 @@ public class HUDKirby : MonoBehaviour
         Kirby.instance.OnDeadStart += MostrarGameOver;
         Kirby.instance.OnGoalGoaled += MostrarGoal;
         Kirby.instance.OnByeBye += MostrarByeBye;
+
+        UpdateScoreUI();
     }
 
     void MostrarOuch()
@@ -84,6 +100,12 @@ public class HUDKirby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
+
         if (mostrar)
         {
             timer -= Time.deltaTime; /** tiempo - deltaTime */
@@ -98,6 +120,8 @@ public class HUDKirby : MonoBehaviour
                 byebye_image.enabled = false;
             }
         }
+
+        
 
         UpdateKirbyLifeState();
     }
@@ -141,6 +165,35 @@ public class HUDKirby : MonoBehaviour
             color.a = 1 - (time / fadeDuration);
             fade_image.color = color;
             yield return null;
+        }
+    }
+    /** --- SCORE SYSTEM ---------------------------- */
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+
+        UpdateScoreUI();
+    }
+
+    void UpdateScoreUI()
+    {
+        scoreText.text = " " + score;
+    }
+
+    void TogglePause()
+    {
+        isPaused = !isPaused;
+
+        pausePanel.SetActive(isPaused);
+
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 }
