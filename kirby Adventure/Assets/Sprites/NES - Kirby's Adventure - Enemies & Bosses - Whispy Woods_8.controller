@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1107 &-8053048472632523437
+=======
+--- !u!1107 &-3451058288486496661
+>>>>>>> Izan
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -10,7 +14,11 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: 788779863038818686}
+=======
+    m_State: {fileID: 1852421585055797853}
+>>>>>>> Izan
     m_Position: {x: 200, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
@@ -21,7 +29,11 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+<<<<<<< HEAD
   m_DefaultState: {fileID: 788779863038818686}
+=======
+  m_DefaultState: {fileID: 1852421585055797853}
+>>>>>>> Izan
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -34,7 +46,11 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
+<<<<<<< HEAD
     m_StateMachine: {fileID: -8053048472632523437}
+=======
+    m_StateMachine: {fileID: -3451058288486496661}
+>>>>>>> Izan
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -44,14 +60,22 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1102 &788779863038818686
+=======
+--- !u!1102 &1852421585055797853
+>>>>>>> Izan
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: estado-final-de-combate-boss
+=======
+  m_Name: arbol muerto
+>>>>>>> Izan
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,7 +88,11 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
+<<<<<<< HEAD
   m_Motion: {fileID: 7400000, guid: 77f36a07c587f81489e2cbb37f89d22f, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: 862ee8f4d2572df4a9331e8e284cab06, type: 2}
+>>>>>>> Izan
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

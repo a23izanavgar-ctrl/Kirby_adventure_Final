@@ -1,0 +1,3070 @@
+fileFormatVersion: 2
+guid: ac50faa10f8cf6b4092a30c39638950e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_0
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 218
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a2000f72322244f993916a665b743b
+      internalID: -941252495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 240
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c43df0653d6c384ba3f8672d629c6fd
+      internalID: -1059431506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 240
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e98524db3bb5404d83058801d8fb262
+      internalID: 1292042460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 219
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775b50c69cd963f459b3a5437a5f7c9b
+      internalID: 2121599908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 219
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b77e53af101f8941a03ec7cf3300a95
+      internalID: -1756953819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 219
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7720f503b742de46b3e078b1fcfe62b
+      internalID: -183973489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 219
+        width: 50
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30572cecd226fb2419f364b59fb75b04
+      internalID: -2107313650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_7
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 219
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529b13ba4508a1247b8905c14adf3161
+      internalID: 1286763114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_8
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 219
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68ad43b06635304d8eddf262bc62bcd
+      internalID: -120284208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_9
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 218
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f70cb3d02329c64aaf9a0da44373884
+      internalID: -278992013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 216
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5379b25aea305ce4dac47a39bb5dece6
+      internalID: 692774301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 218
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f34a0229782fe46aab343a73a66e2c
+      internalID: 1378173971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_12
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 218
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aab6cd63a4706e44a7975e277c551d8
+      internalID: 1338205726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_13
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 219
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10142e023e578024db9a8810d19fce6c
+      internalID: 201636786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_14
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 219
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631d82abbfc7fe749b80c0e8c2d131a7
+      internalID: -706380428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 219
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a80645295d86994f8ce38ae1ad60dff
+      internalID: -1793480246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 171
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aceaad88c830e4389bb32a009642f5
+      internalID: -732956892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 171
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097871383463e094b9a26ebb21e2db81
+      internalID: 1897220846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_19
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 171
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e224f8b763cdf0743a182abbec2956b9
+      internalID: 4059433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_20
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 171
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a704993d58738e4592bdcd41a48dc71
+      internalID: 994360917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_21
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 171
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec1c1d940d033142b7b10c214f196b0
+      internalID: 1964211247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_22
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25530aa912a2ce946bf17e8874984cd8
+      internalID: 792355746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_23
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afadc10c630c0a47a74957e87b9dd83
+      internalID: -135933599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad00a08e21a86784092dc95e6b0b6e3b
+      internalID: 1575989734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_25
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedc885d2d50c214eb5f857b21adf1ef
+      internalID: 1307646185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_26
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ca8f32b76e20f4688143c95f1add0b
+      internalID: -1765031406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_27
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032b275c5af44a64b91f020df3591112
+      internalID: 557360253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_28
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 171
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa201fdd0fa66194898ea7216cd91a98
+      internalID: -773063707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_29
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 171
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7556d909d5fc341b5dbefd083591fd
+      internalID: 369939606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_30
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 171
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f2a56180323374e91e89f5fee4156c
+      internalID: -1329744414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 130
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8f8e1de9c4abb449db17d8ccff99cc
+      internalID: 1372875793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_32
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 130
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29142a73573b0b646814446539e782f3
+      internalID: -1204691326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_33
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e42c2c2d92cd44296ab9f38930f195
+      internalID: -1637945524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_34
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 130
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3437bf7f400242468543a6bb9f07e23
+      internalID: -1832748536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_35
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 130
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79884d3dbd4ad4247ade2b93eb4bd034
+      internalID: 251840917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_36
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 130
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10aea0ae446a03540b2fc85f7c6191ba
+      internalID: -635150586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_37
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6248d36d3261f5d499ce25537bd8562a
+      internalID: -68968697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_38
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eebe6bbf6234e64dbde429fdf969760
+      internalID: -1601051699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_39
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d921cbc54f73940b886ed0a6b2b93c
+      internalID: 1625313882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_40
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9201d3b02a8393c44bf38bd414a8009c
+      internalID: 228889650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_41
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d16f1975f3a1034897884bab5e5679b
+      internalID: 105069651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_42
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 130
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fe78bfaa2113b469e3531f53d178db
+      internalID: -1842419871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_43
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 130
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5c0a8263ba6bb4aa9116e715a53bb4
+      internalID: 1077636445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_44
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 130
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ba72f9d40e27645acb5a2b776abe02
+      internalID: -903618168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_45
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 80
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5de11486b611349a176fbf2219f883
+      internalID: 1667961767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6275232b7d980af4bbf15e2645e5fff0
+      internalID: -622577390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_47
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 80
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bff6345542b9c459f6d3d607bb6627
+      internalID: -649509449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_48
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 80
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2defa310db972a6419c5d7d1d1dfdbd7
+      internalID: 1816153071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_49
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01be97d19d361e488fe20df22919230
+      internalID: 1756868495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_50
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 80
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e804a493b461a784bb11f352a1332cf5
+      internalID: 1432679136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_51
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 80
+        width: 65
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c368368ca574f449b17f8bc2d865402
+      internalID: -384287237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_52
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 80
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39af10199cc0aa94b80893891181b6ff
+      internalID: 1390441816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_53
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 80
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496d21e44db38f04799f41434c13dc7d
+      internalID: 532310943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_54
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 80
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cc5f115b7d6084d82f6d61f02ffbf2
+      internalID: 56662117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_55
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 101
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10835e40747d68f4ea5748ba8a909f6e
+      internalID: 1931621972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_56
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 101
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dbc55405fe33048848db29baec15dc
+      internalID: 1018980875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_57
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 104
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab000cae585236b498bd7faf709d7cb3
+      internalID: 1590882717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_58
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 101
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a1a353b2021584ca0dd500b8b1b962
+      internalID: -1923965785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_59
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 104
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a52205705a26bc43bcd509f442ea7f4
+      internalID: 943619851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_60
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 68
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9ae138ac02474419321184e72758d8
+      internalID: -2142935837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_61
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 80
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ffa84eb61e46c48bbbed51ef853a5a
+      internalID: -1367805096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_62
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 80
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06bc3e99c229164e96e423f4a728d82
+      internalID: 978961325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_63
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 80
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c54006fe94a76b4196fcccbe11e3f8c
+      internalID: -714387117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_64
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 32
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41030e65bdc3ab54e9f3ea4d2150304a
+      internalID: -907378821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_65
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 32
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af83bf3e825be1a4eb65dea9329e8509
+      internalID: 626604127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_66
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 32
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34bfb1d4c0aa7c46a1020d5618e7d18
+      internalID: 1618646495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_67
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 32
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e9569351ec8534e8928a973e73e422
+      internalID: 1736055611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_68
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 13
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff03892df584b11478b75723a19f021d
+      internalID: -806242075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_69
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 32
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d89006bf5a42b4cbef0d7f2ab12d33
+      internalID: 1781798403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_70
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 32
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf342531ea958284691485cf15507f7c
+      internalID: 1946779934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_71
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be828e29c2d55f84d90c7645a3b8f114
+      internalID: 728515080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_72
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 32
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdb090e3c17da24eb4ff277e0963553
+      internalID: 685400215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_73
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 32
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7276002df9eed54cb99680cd2b6ba33
+      internalID: 116094238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_74
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc06f582cbfc06b42b6d823bda471d0f
+      internalID: 867019818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_75
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8b50c1971c4634a928e3d867af79e6
+      internalID: 894247584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_76
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eae4419e6b796c46929ffaf5feae331
+      internalID: 357631076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_77
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdb84a736de42a4494447f9fdec6b69
+      internalID: 237976775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_78
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478b7765ecf8a2043b87c4d36d6fb9b2
+      internalID: -1818919157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_79
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 51
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b56ae5355ce6c4f971a23b7d9fddd9
+      internalID: -1975358802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_80
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 39
+        width: 76
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688f04f4054c03b4ea74926edf1af63a
+      internalID: 169009781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_81
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af678bea5beb06f4b8783993dd4ec76f
+      internalID: -1148679475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_82
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbd6af0ca8119442a0f8801f18ea3d2
+      internalID: -1111604710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_83
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b0d1e20e4df0542870f9dd0afe1403
+      internalID: -955667605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_84
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e06fda1309a9b4e922bb795e83e6e6
+      internalID: 99758560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_85
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0958d2533e4582147a53ef9d35fc9171
+      internalID: -1109956317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_86
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243456cdc6c83db488e2eb8771fe7135
+      internalID: -1911265623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_87
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 10
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9776d038c4390c343b985246e1617fb5
+      internalID: -56287824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_88
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 2
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4880e9091e6e92b4b84785751d9367ab
+      internalID: -1726174909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 13
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e7cbf1ddeb5d4479a1c02b5ceaebc3
+      internalID: -1588137590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_90
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 11
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0f10d892dd1b34b82fb7898c6a2c49
+      internalID: 849924877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_91
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 16
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51f8c2e1c2f29a4e98b8be07f3b33d8
+      internalID: 571737359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_92
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 13
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1e180c5688ab24fb7b1e22acb42086
+      internalID: -1641794007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_93
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 13
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7ddd62353c013478954c92e015cd46
+      internalID: 636922149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_94
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 13
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8172c32301ed6d44ace0f5763c2b8ad
+      internalID: -2083383001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_95
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 13
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f4fd0bd0c93dc4187137b811ff03b8
+      internalID: 550946110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_96
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 13
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d473b8ab403fb4ea7875faf9d7689e
+      internalID: 1928749437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_97
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 13
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b958a35e7118d1346b2eb822499044c9
+      internalID: 723996178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_98
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 13
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b759fdbd866bb3647a3a1d0eb60e17d7
+      internalID: 2043099447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_99
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 13
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a0cc1d5572cdc46a35588cec6e93ae
+      internalID: 1995164242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_100
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 13
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacdd0f01338b114584713e3389eb056
+      internalID: 974271994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_101
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 13
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52e8cfe577a00141908adca99bacb37
+      internalID: 543624251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_102
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 11
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c27d6715297c6449959deb166cbb8ce
+      internalID: -2006519490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_103
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 13
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ca497f70050594590e3fc51db18beb
+      internalID: 345344088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_104
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 10
+        width: 146
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651f0ebeebfcffb49aa428bcf2aacc43
+      internalID: -1130526822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_105
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fb25d074191a34b825d02f158333ac
+      internalID: -1450204837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_106
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0835c63c1f26722438adc0df506df701
+      internalID: -1604089693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_107
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f103adeb63eeb40af4cad3a6dd66ab
+      internalID: -149356160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_108
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6477c47789e394fb640459f644bc20
+      internalID: -2033621798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_109
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56f319b9f38fe64f8de94aab5ba219a
+      internalID: -1074594373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_110
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e179b5770e436046828de2c8e9d6ad1
+      internalID: 1944539732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_111
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 2
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be7091171df28d41844f1437cbf8ace
+      internalID: -465597351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_112
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 2
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965a21031a439244a893c00a9e0fb096
+      internalID: -2143668865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_113
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ece8c0a902f04439c52ae83a7c19da
+      internalID: -2071196639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_114
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486978e0a56fdb04c855cf74dcb82de3
+      internalID: 1668537631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_115
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 2
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cb9e2c6309d5a4197e5a559baecc49
+      internalID: 707917762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_116
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 2
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c89e1abe673644f955289ed0db1eb6
+      internalID: 206338539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_117
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0569b01ee090bb46a74e68c0c9787e9
+      internalID: 850799570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_118
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafdf58a8815aab44ad6321a29ce1bbd
+      internalID: 12773831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_119
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcca3942c4a5cc34587d4f01dc542fc5
+      internalID: 1931235063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_120
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 2
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4be00b5b2323349b35ba8f743b1b95
+      internalID: 248135052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_121
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 2
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660ed13e51888c341a5a8149526acd58
+      internalID: -1302625693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_122
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 2
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e836777281e9a9643b6cfd9ed4de30c2
+      internalID: -1045398420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_123
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 2
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4624090261e2c4dbc31709b9db6283
+      internalID: 910451308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_124
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff11c09055b59a44d8e8f87d47eb0387
+      internalID: 346510067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_18
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15f33f844906af4a83070bd699041e3
+      internalID: 1027028731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_125
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419676bbd1b72e44e92ebb967c0a555c
+      internalID: 1930771672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_126
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82e9727a4950e3468184fbcf3ac910b
+      internalID: 643824178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_127
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 171
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7eab61cbe229147be412ce3841bbd6
+      internalID: 1929377212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_128
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266bd663f08b15143b5dcaa910ae010f
+      internalID: -1956189861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_129
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6eff6e5daf0b4145ad78c9e907ea238
+      internalID: -264897612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_130
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5646186855452242ab38bd2ced6e8c2
+      internalID: -910609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelBin-AI-Image-Editor-1777558991152_131
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 130
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675cb7a64b7ac5a448497e3bdd9d3ded
+      internalID: 442176339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: da68a0b8a9a3e58489ddfc2c5c341002
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PixelBin-AI-Image-Editor-1777558991152_0: -941252495
+      PixelBin-AI-Image-Editor-1777558991152_1: -1059431506
+      PixelBin-AI-Image-Editor-1777558991152_10: 692774301
+      PixelBin-AI-Image-Editor-1777558991152_100: 974271994
+      PixelBin-AI-Image-Editor-1777558991152_101: 543624251
+      PixelBin-AI-Image-Editor-1777558991152_102: -2006519490
+      PixelBin-AI-Image-Editor-1777558991152_103: 345344088
+      PixelBin-AI-Image-Editor-1777558991152_104: -1130526822
+      PixelBin-AI-Image-Editor-1777558991152_105: -1450204837
+      PixelBin-AI-Image-Editor-1777558991152_106: -1604089693
+      PixelBin-AI-Image-Editor-1777558991152_107: -149356160
+      PixelBin-AI-Image-Editor-1777558991152_108: -2033621798
+      PixelBin-AI-Image-Editor-1777558991152_109: -1074594373
+      PixelBin-AI-Image-Editor-1777558991152_11: 1378173971
+      PixelBin-AI-Image-Editor-1777558991152_110: 1944539732
+      PixelBin-AI-Image-Editor-1777558991152_111: -465597351
+      PixelBin-AI-Image-Editor-1777558991152_112: -2143668865
+      PixelBin-AI-Image-Editor-1777558991152_113: -2071196639
+      PixelBin-AI-Image-Editor-1777558991152_114: 1668537631
+      PixelBin-AI-Image-Editor-1777558991152_115: 707917762
+      PixelBin-AI-Image-Editor-1777558991152_116: 206338539
+      PixelBin-AI-Image-Editor-1777558991152_117: 850799570
+      PixelBin-AI-Image-Editor-1777558991152_118: 12773831
+      PixelBin-AI-Image-Editor-1777558991152_119: 1931235063
+      PixelBin-AI-Image-Editor-1777558991152_12: 1338205726
+      PixelBin-AI-Image-Editor-1777558991152_120: 248135052
+      PixelBin-AI-Image-Editor-1777558991152_121: -1302625693
+      PixelBin-AI-Image-Editor-1777558991152_122: -1045398420
+      PixelBin-AI-Image-Editor-1777558991152_123: 910451308
+      PixelBin-AI-Image-Editor-1777558991152_124: 346510067
+      PixelBin-AI-Image-Editor-1777558991152_125: 1930771672
+      PixelBin-AI-Image-Editor-1777558991152_126: 643824178
+      PixelBin-AI-Image-Editor-1777558991152_127: 1929377212
+      PixelBin-AI-Image-Editor-1777558991152_128: -1956189861
+      PixelBin-AI-Image-Editor-1777558991152_129: -264897612
+      PixelBin-AI-Image-Editor-1777558991152_13: 201636786
+      PixelBin-AI-Image-Editor-1777558991152_130: -910609
+      PixelBin-AI-Image-Editor-1777558991152_131: 442176339
+      PixelBin-AI-Image-Editor-1777558991152_14: -706380428
+      PixelBin-AI-Image-Editor-1777558991152_15: -1793480246
+      PixelBin-AI-Image-Editor-1777558991152_16: -732956892
+      PixelBin-AI-Image-Editor-1777558991152_17: 1897220846
+      PixelBin-AI-Image-Editor-1777558991152_18: 1027028731
+      PixelBin-AI-Image-Editor-1777558991152_19: 4059433
+      PixelBin-AI-Image-Editor-1777558991152_2: 1292042460
+      PixelBin-AI-Image-Editor-1777558991152_20: 994360917
+      PixelBin-AI-Image-Editor-1777558991152_21: 1964211247
+      PixelBin-AI-Image-Editor-1777558991152_22: 792355746
+      PixelBin-AI-Image-Editor-1777558991152_23: -135933599
+      PixelBin-AI-Image-Editor-1777558991152_24: 1575989734
+      PixelBin-AI-Image-Editor-1777558991152_25: 1307646185
+      PixelBin-AI-Image-Editor-1777558991152_26: -1765031406
+      PixelBin-AI-Image-Editor-1777558991152_27: 557360253
+      PixelBin-AI-Image-Editor-1777558991152_28: -773063707
+      PixelBin-AI-Image-Editor-1777558991152_29: 369939606
+      PixelBin-AI-Image-Editor-1777558991152_3: 2121599908
+      PixelBin-AI-Image-Editor-1777558991152_30: -1329744414
+      PixelBin-AI-Image-Editor-1777558991152_31: 1372875793
+      PixelBin-AI-Image-Editor-1777558991152_32: -1204691326
+      PixelBin-AI-Image-Editor-1777558991152_33: -1637945524
+      PixelBin-AI-Image-Editor-1777558991152_34: -1832748536
+      PixelBin-AI-Image-Editor-1777558991152_35: 251840917
+      PixelBin-AI-Image-Editor-1777558991152_36: -635150586
+      PixelBin-AI-Image-Editor-1777558991152_37: -68968697
+      PixelBin-AI-Image-Editor-1777558991152_38: -1601051699
+      PixelBin-AI-Image-Editor-1777558991152_39: 1625313882
+      PixelBin-AI-Image-Editor-1777558991152_4: -1756953819
+      PixelBin-AI-Image-Editor-1777558991152_40: 228889650
+      PixelBin-AI-Image-Editor-1777558991152_41: 105069651
+      PixelBin-AI-Image-Editor-1777558991152_42: -1842419871
+      PixelBin-AI-Image-Editor-1777558991152_43: 1077636445
+      PixelBin-AI-Image-Editor-1777558991152_44: -903618168
+      PixelBin-AI-Image-Editor-1777558991152_45: 1667961767
+      PixelBin-AI-Image-Editor-1777558991152_46: -622577390
+      PixelBin-AI-Image-Editor-1777558991152_47: -649509449
+      PixelBin-AI-Image-Editor-1777558991152_48: 1816153071
+      PixelBin-AI-Image-Editor-1777558991152_49: 1756868495
+      PixelBin-AI-Image-Editor-1777558991152_5: -183973489
+      PixelBin-AI-Image-Editor-1777558991152_50: 1432679136
+      PixelBin-AI-Image-Editor-1777558991152_51: -384287237
+      PixelBin-AI-Image-Editor-1777558991152_52: 1390441816
+      PixelBin-AI-Image-Editor-1777558991152_53: 532310943
+      PixelBin-AI-Image-Editor-1777558991152_54: 56662117
+      PixelBin-AI-Image-Editor-1777558991152_55: 1931621972
+      PixelBin-AI-Image-Editor-1777558991152_56: 1018980875
+      PixelBin-AI-Image-Editor-1777558991152_57: 1590882717
+      PixelBin-AI-Image-Editor-1777558991152_58: -1923965785
+      PixelBin-AI-Image-Editor-1777558991152_59: 943619851
+      PixelBin-AI-Image-Editor-1777558991152_6: -2107313650
+      PixelBin-AI-Image-Editor-1777558991152_60: -2142935837
+      PixelBin-AI-Image-Editor-1777558991152_61: -1367805096
+      PixelBin-AI-Image-Editor-1777558991152_62: 978961325
+      PixelBin-AI-Image-Editor-1777558991152_63: -714387117
+      PixelBin-AI-Image-Editor-1777558991152_64: -907378821
+      PixelBin-AI-Image-Editor-1777558991152_65: 626604127
+      PixelBin-AI-Image-Editor-1777558991152_66: 1618646495
+      PixelBin-AI-Image-Editor-1777558991152_67: 1736055611
+      PixelBin-AI-Image-Editor-1777558991152_68: -806242075
+      PixelBin-AI-Image-Editor-1777558991152_69: 1781798403
+      PixelBin-AI-Image-Editor-1777558991152_7: 1286763114
+      PixelBin-AI-Image-Editor-1777558991152_70: 1946779934
+      PixelBin-AI-Image-Editor-1777558991152_71: 728515080
+      PixelBin-AI-Image-Editor-1777558991152_72: 685400215
+      PixelBin-AI-Image-Editor-1777558991152_73: 116094238
+      PixelBin-AI-Image-Editor-1777558991152_74: 867019818
+      PixelBin-AI-Image-Editor-1777558991152_75: 894247584
+      PixelBin-AI-Image-Editor-1777558991152_76: 357631076
+      PixelBin-AI-Image-Editor-1777558991152_77: 237976775
+      PixelBin-AI-Image-Editor-1777558991152_78: -1818919157
+      PixelBin-AI-Image-Editor-1777558991152_79: -1975358802
+      PixelBin-AI-Image-Editor-1777558991152_8: -120284208
+      PixelBin-AI-Image-Editor-1777558991152_80: 169009781
+      PixelBin-AI-Image-Editor-1777558991152_81: -1148679475
+      PixelBin-AI-Image-Editor-1777558991152_82: -1111604710
+      PixelBin-AI-Image-Editor-1777558991152_83: -955667605
+      PixelBin-AI-Image-Editor-1777558991152_84: 99758560
+      PixelBin-AI-Image-Editor-1777558991152_85: -1109956317
+      PixelBin-AI-Image-Editor-1777558991152_86: -1911265623
+      PixelBin-AI-Image-Editor-1777558991152_87: -56287824
+      PixelBin-AI-Image-Editor-1777558991152_88: -1726174909
+      PixelBin-AI-Image-Editor-1777558991152_89: -1588137590
+      PixelBin-AI-Image-Editor-1777558991152_9: -278992013
+      PixelBin-AI-Image-Editor-1777558991152_90: 849924877
+      PixelBin-AI-Image-Editor-1777558991152_91: 571737359
+      PixelBin-AI-Image-Editor-1777558991152_92: -1641794007
+      PixelBin-AI-Image-Editor-1777558991152_93: 636922149
+      PixelBin-AI-Image-Editor-1777558991152_94: -2083383001
+      PixelBin-AI-Image-Editor-1777558991152_95: 550946110
+      PixelBin-AI-Image-Editor-1777558991152_96: 1928749437
+      PixelBin-AI-Image-Editor-1777558991152_97: 723996178
+      PixelBin-AI-Image-Editor-1777558991152_98: 2043099447
+      PixelBin-AI-Image-Editor-1777558991152_99: 1995164242
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

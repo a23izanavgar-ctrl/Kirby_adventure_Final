@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:kirby Adventure/Assets/Scripts/AttackData.cs.meta
 guid: 8e40346e5d3f921489d7f3eedbbb453e
+=======
+guid: db8d6ae23c5a19f49af178bd53e6bb88
+>>>>>>> Izan:kirby Adventure/Assets/Scripts/boss-arbol.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

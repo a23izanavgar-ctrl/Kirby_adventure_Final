@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Mapa-Menu_Inicial.unity
+    guid: 17eda105f184dba46907668227d456bf
+  - enabled: 1
     path: Assets/Scenes/mapa-niveles.unity
     guid: 6058cd728f148474b969af9151b48876
   - enabled: 1
