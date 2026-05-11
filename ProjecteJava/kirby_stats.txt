@@ -1,0 +1,5 @@
+vida=6
+absorbCounter=0
+score=0
+tiempoDeJuego=9 segons
+sessionTimestamp=2026-05-11T16:28:25.9827770Z
